@@ -1,3 +1,11 @@
-/Users/nhm/CLionProjects/P1/cmake-build-debug/CMakeFiles/P1.dir
-/Users/nhm/CLionProjects/P1/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/nhm/CLionProjects/P1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/patri/CLionProjects/P1/cmake-build-debug/CMakeFiles/test.dir
+C:/Users/patri/CLionProjects/P1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/patri/CLionProjects/P1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/patri/CLionProjects/P1/cmake-build-debug/src/CMakeFiles/P1.dir
+C:/Users/patri/CLionProjects/P1/cmake-build-debug/src/CMakeFiles/my_test.dir
+C:/Users/patri/CLionProjects/P1/cmake-build-debug/src/CMakeFiles/test.dir
+C:/Users/patri/CLionProjects/P1/cmake-build-debug/src/CMakeFiles/edit_cache.dir
+C:/Users/patri/CLionProjects/P1/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir
+C:/Users/patri/CLionProjects/P1/cmake-build-debug/_deps/mtest-build/CMakeFiles/test.dir
+C:/Users/patri/CLionProjects/P1/cmake-build-debug/_deps/mtest-build/CMakeFiles/edit_cache.dir
+C:/Users/patri/CLionProjects/P1/cmake-build-debug/_deps/mtest-build/CMakeFiles/rebuild_cache.dir
