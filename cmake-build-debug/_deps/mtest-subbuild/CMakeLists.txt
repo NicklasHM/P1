@@ -20,8 +20,8 @@ project(mtest-populate NONE)
 include(ExternalProject)
 ExternalProject_Add(mtest-populate
                      "UPDATE_DISCONNECTED" "False" "DOWNLOAD_EXTRACT_TIMESTAMP" "FALSE" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "URL" "https://github.com/MortenSchou/mtest/archive/refs/tags/v0.2.0.zip" "URL_HASH" "SHA256=bec1e90fb00a5bc155de12ed5ed39ea5d1a1b6fcfb6c80cce5ad3e38e360248c"
-                    SOURCE_DIR          "C:/Users/patri/CLionProjects/P1/cmake-build-debug/_deps/mtest-src"
-                    BINARY_DIR          "C:/Users/patri/CLionProjects/P1/cmake-build-debug/_deps/mtest-build"
+                    SOURCE_DIR          "/Users/nhm/CLionProjects/P1/cmake-build-debug/_deps/mtest-src"
+                    BINARY_DIR          "/Users/nhm/CLionProjects/P1/cmake-build-debug/_deps/mtest-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""
