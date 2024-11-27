@@ -1,5 +1,5 @@
-#include "src/functions/scan_nmrplade.h"
-#include "src/functions/beregn_p_plads.h"
+#include "functions/scan_nmrplade.h"
+#include "functions/beregn_p_plads.h"
 
 // Hovedprogram
 int main() {
