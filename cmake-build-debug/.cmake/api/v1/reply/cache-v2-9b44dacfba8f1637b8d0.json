@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/nhm/CLionProjects/P1/cmake-build-debug"
+			"value" : "/Users/frederikskipper-andersen/CLionProjects/P1Secondbranch/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -383,7 +383,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/nhm/CLionProjects/P1/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/Users/frederikskipper-andersen/CLionProjects/P1Secondbranch/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -395,7 +395,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "Ninja"
+			"value" : "Unix Makefiles"
 		},
 		{
 			"name" : "CMAKE_GENERATOR_INSTANCE",
@@ -443,7 +443,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/nhm/CLionProjects/P1"
+			"value" : "/Users/frederikskipper-andersen/CLionProjects/P1Secondbranch"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -494,12 +494,16 @@
 			"properties" : 
 			[
 				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "Path to a program."
 				}
 			],
-			"type" : "UNINITIALIZED",
-			"value" : "/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja"
+			"type" : "FILEPATH",
+			"value" : "/usr/bin/make"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -1022,78 +1026,6 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "FETCHCONTENT_BASE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Directory under which to collect all populated content"
-				}
-			],
-			"type" : "PATH",
-			"value" : "/Users/nhm/CLionProjects/P1/cmake-build-debug/_deps"
-		},
-		{
-			"name" : "FETCHCONTENT_FULLY_DISCONNECTED",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Disables all attempts to download or update content and assumes source dirs already exist"
-				}
-			],
-			"type" : "BOOL",
-			"value" : "OFF"
-		},
-		{
-			"name" : "FETCHCONTENT_QUIET",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Enables QUIET option for all content population"
-				}
-			],
-			"type" : "BOOL",
-			"value" : "ON"
-		},
-		{
-			"name" : "FETCHCONTENT_SOURCE_DIR_MTEST",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "When not empty, overrides where to find pre-populated content for mtest"
-				}
-			],
-			"type" : "PATH",
-			"value" : ""
-		},
-		{
-			"name" : "FETCHCONTENT_UPDATES_DISCONNECTED",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Enables UPDATE_DISCONNECTED behavior for all content population"
-				}
-			],
-			"type" : "BOOL",
-			"value" : "OFF"
-		},
-		{
-			"name" : "FETCHCONTENT_UPDATES_DISCONNECTED_MTEST",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Enables UPDATE_DISCONNECTED behavior just for population of mtest"
-				}
-			],
-			"type" : "BOOL",
-			"value" : "OFF"
-		},
-		{
 			"name" : "P1_BINARY_DIR",
 			"properties" : 
 			[
@@ -1103,7 +1035,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/nhm/CLionProjects/P1/cmake-build-debug"
+			"value" : "/Users/frederikskipper-andersen/CLionProjects/P1Secondbranch/cmake-build-debug"
 		},
 		{
 			"name" : "P1_IS_TOP_LEVEL",
@@ -1127,7 +1059,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/nhm/CLionProjects/P1"
+			"value" : "/Users/frederikskipper-andersen/CLionProjects/P1Secondbranch"
 		}
 	],
 	"kind" : "cache",

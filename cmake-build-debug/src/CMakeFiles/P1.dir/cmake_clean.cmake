@@ -1,14 +1,12 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/P1.dir/functions/beregn_p_plads.c.obj"
-  "CMakeFiles/P1.dir/functions/beregn_p_plads.c.obj.d"
-  "CMakeFiles/P1.dir/functions/scan_nmrplade.c.obj"
-  "CMakeFiles/P1.dir/functions/scan_nmrplade.c.obj.d"
-  "CMakeFiles/P1.dir/main.c.obj"
-  "CMakeFiles/P1.dir/main.c.obj.d"
-  "P1.exe"
-  "P1.exe.manifest"
+  "CMakeFiles/P1.dir/functions/beregn_p_plads.c.o"
+  "CMakeFiles/P1.dir/functions/beregn_p_plads.c.o.d"
+  "CMakeFiles/P1.dir/functions/scan_nmrplade.c.o"
+  "CMakeFiles/P1.dir/functions/scan_nmrplade.c.o.d"
+  "CMakeFiles/P1.dir/main.c.o"
+  "CMakeFiles/P1.dir/main.c.o.d"
+  "P1"
   "P1.pdb"
-  "libP1.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

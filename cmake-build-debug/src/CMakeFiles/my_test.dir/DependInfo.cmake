@@ -8,7 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/patri/CLionProjects/P1/src/test/test_functions.c" "src/CMakeFiles/my_test.dir/test/test_functions.c.obj" "gcc" "src/CMakeFiles/my_test.dir/test/test_functions.c.obj.d"
+  "/Users/frederikskipper-andersen/CLionProjects/P1Secondbranch/src/functions/beregn_p_plads.c" "src/CMakeFiles/my_test.dir/functions/beregn_p_plads.c.o" "gcc" "src/CMakeFiles/my_test.dir/functions/beregn_p_plads.c.o.d"
+  "/Users/frederikskipper-andersen/CLionProjects/P1Secondbranch/src/functions/scan_nmrplade.c" "src/CMakeFiles/my_test.dir/functions/scan_nmrplade.c.o" "gcc" "src/CMakeFiles/my_test.dir/functions/scan_nmrplade.c.o.d"
+  "/Users/frederikskipper-andersen/CLionProjects/P1Secondbranch/src/test/test_functions.c" "src/CMakeFiles/my_test.dir/test/test_functions.c.o" "gcc" "src/CMakeFiles/my_test.dir/test/test_functions.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

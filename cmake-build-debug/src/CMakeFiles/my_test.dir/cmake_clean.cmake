@@ -1,11 +1,12 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/my_test.dir/test/test_functions.c.obj"
-  "CMakeFiles/my_test.dir/test/test_functions.c.obj.d"
-  "libmy_test.dll.a"
-  "my_test.exe"
-  "my_test.exe.manifest"
+  "CMakeFiles/my_test.dir/functions/beregn_p_plads.c.o"
+  "CMakeFiles/my_test.dir/functions/beregn_p_plads.c.o.d"
+  "CMakeFiles/my_test.dir/functions/scan_nmrplade.c.o"
+  "CMakeFiles/my_test.dir/functions/scan_nmrplade.c.o.d"
+  "CMakeFiles/my_test.dir/test/test_functions.c.o"
+  "CMakeFiles/my_test.dir/test/test_functions.c.o.d"
+  "my_test"
   "my_test.pdb"
-  "my_test_tests.cmake"
 )
 
 # Per-language clean rules from dependency scanning.

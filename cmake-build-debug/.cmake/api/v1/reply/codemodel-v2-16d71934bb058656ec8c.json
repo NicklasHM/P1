@@ -74,8 +74,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/nhm/CLionProjects/P1/cmake-build-debug",
-		"source" : "/Users/nhm/CLionProjects/P1"
+		"build" : "/Users/frederikskipper-andersen/CLionProjects/P1Secondbranch/cmake-build-debug",
+		"source" : "/Users/frederikskipper-andersen/CLionProjects/P1Secondbranch"
 	},
 	"version" : 
 	{
