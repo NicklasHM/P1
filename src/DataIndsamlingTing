@@ -1,0 +1,93 @@
+#include <stdio.h>
+#include <string.h>
+
+
+int line_exists(FILE *file, const char *input) {
+    char line[256];
+    rewind(file);
+    while (fgets(line, sizeof(line), file) != NULL) {
+
+        line[strcspn(line, "\n")] = 0;
+        if (strcmp(line, input) == 0) {
+            return 1; // gen bruger
+        }
+    }
+    return 0; // ny bruger
+}
+
+int main() {
+    // åbner filen i reading og apending
+    FILE *file = fopen("Nummerplader.txt", "a+");
+    if (file == NULL) {
+        printf("Error opening file!\n");
+        return 1;
+    }
+
+    char input[256]; // Buffer til bruger input
+    char numberplate[50]; // nummerplade
+    char handicap[10]; // bruger handicap
+    char el[10]; // bil el
+    char præferance[200]; // præferance
+    printf("Enter numberplate to write to the file (type 'exit' to quit):\n");
+
+    while (1) {
+        printf("> ");
+        fgets(input, sizeof(input), stdin); // bruger input
+
+
+        input[strcspn(input, "\n")] = 0; //fjerner ny linje
+
+
+        if (strcmp(input, "exit") == 0) {
+            break;
+        }
+        int parsed = sscanf(input, "%s %s %s %[^\n]", numberplate, handicap, el, præferance);
+
+        // skriv bruger input i filen
+        if (line_exists(file, input)) {
+            printf("The numberplate '%s' is already registrated\n", numberplate);
+        } else {
+            if (parsed >= 3) { // Ensure at least number, yes_no1, and yes_no2 are provided
+                printf("Parsed Input:\n");
+                printf("Number: %s\n", numberplate);
+                printf("Yes/No 1: %s\n", handicap);
+                printf("Yes/No 2: %s\n", el);
+
+                if (parsed == 4) { // Check if extra notes were provided
+                    printf("Extra Notes: %s\n", præferance);
+                } else {
+                    printf("Extra Notes: None\n");
+                }
+            }
+            fflush(file);
+        }
+        if (line_exists(file, input)) {
+            printf("The numberplate '%s' is already registered. Skipping...\n", numberplate);
+        } else {
+            // Save the parsed data to the file
+            if (parsed == 4) {
+                fprintf(file, "%s %s %s %s\n", numberplate, handicap, el, præferance);
+            } else {
+                fprintf(file, "%s %s %s\n", numberplate, handicap, el);
+            }
+            fflush(file); // Ensure data is written to the file
+            printf("Data successfully saved: %s %s %s %s\n", numberplate, handicap, el,
+                   parsed == 4 ? præferance : "No notes");
+        }
+
+        printf("User data successfully saved to 'Nummerplader.txt'.\n");
+        FILE *file2 = fopen("Nummerplader.txt", "r");
+        if (file2 == NULL) {
+            printf("Error opening file for reading!\n");
+            return 1;
+        }
+        printf("nummerplade | HK | El | prefrence \n");
+        while (fgets(input, sizeof(input), file2) != NULL) {
+            // Parse the line to extract fields
+            sscanf(input, "%s %s %s %[^\n]", numberplate, handicap, el, præferance);
+            printf("%.12s | %.3s | %.3s | %.9s\n", numberplate, handicap, el, præferance); // Print each line
+        }
+        fclose(file2);
+        return 0;
+    }
+}
