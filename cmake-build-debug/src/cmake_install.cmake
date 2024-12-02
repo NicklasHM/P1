@@ -1,4 +1,4 @@
-# Install script for directory: /Users/frederikskipper-andersen/CLionProjects/P1Secondbranch/src
+# Install script for directory: /Users/frederikskipper-andersen/CLionProjects/P1AGAIN/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
