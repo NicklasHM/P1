@@ -1,6 +1,6 @@
 #include "functions/scan_nmrplade.h"
 #include "functions/beregn_p_plads.h"
-// tjekker branch11
+// tjekker branch111
 // Hovedprogram
 int main() {
     PriorityQueue afstandHeap = { .size = 0 };
