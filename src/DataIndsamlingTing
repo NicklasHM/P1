@@ -2,17 +2,19 @@
 #include <string.h>
 
 
-int line_exists(FILE *file, const char *input) {
+int find_line(FILE *file, const char *numberplate, char *result_line) {
     char line[256];
-    rewind(file);
-    while (fgets(line, sizeof(line), file) != NULL) {
+    char file_numberplate[50];
 
-        line[strcspn(line, "\n")] = 0;
-        if (strcmp(line, input) == 0) {
-            return 1; // gen bruger
+    rewind(file); // Reset file pointer to the beginning
+    while (fgets(line, sizeof(line), file) != NULL) {
+        sscanf(line, "%s", file_numberplate); // Extract numberplate from the line
+        if (strcmp(file_numberplate, numberplate) == 0) {
+            strcpy(result_line, line); // Copy the matching line to result_line
+            return 1; // Numberplate found
         }
     }
-    return 0; // ny bruger
+    return 0; // Numberplate not found
 }
 
 int main() {
@@ -28,6 +30,7 @@ int main() {
     char handicap[10]; // bruger handicap
     char el[10]; // bil el
     char præferance[200]; // præferance
+    char result_line[256];
     printf("Enter numberplate to write to the file (type 'exit' to quit):\n");
 
     while (1) {
@@ -44,9 +47,7 @@ int main() {
         int parsed = sscanf(input, "%s %s %s %[^\n]", numberplate, handicap, el, præferance);
 
         // skriv bruger input i filen
-        if (line_exists(file, input)) {
-            printf("The numberplate '%s' is already registrated\n", numberplate);
-        } else {
+
             if (parsed >= 3) { // Ensure at least number, yes_no1, and yes_no2 are provided
                 printf("Parsed Input:\n");
                 printf("Number: %s\n", numberplate);
@@ -60,9 +61,12 @@ int main() {
                 }
             }
             fflush(file);
-        }
-        if (line_exists(file, input)) {
-            printf("The numberplate '%s' is already registered. Skipping...\n", numberplate);
+
+        if (find_line(file, numberplate, result_line)) {
+            printf("nummerplade | HK  | El  | prefrence \n");
+            sscanf(result_line, "%s %s %s %[^\n]", numberplate, handicap, el, præferance);
+            printf("%-11s | %-3s | %-3s | %-9s\n", numberplate, handicap, el, præferance);
+            return 0;
         } else {
             // Save the parsed data to the file
             if (parsed == 4) {
