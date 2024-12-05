@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/frederikskipper-andersen/CLionProjects/P1Secondbranch/src/functions/beregn_p_plads.c" "src/CMakeFiles/P1.dir/functions/beregn_p_plads.c.o" "gcc" "src/CMakeFiles/P1.dir/functions/beregn_p_plads.c.o.d"
-  "/Users/frederikskipper-andersen/CLionProjects/P1Secondbranch/src/functions/scan_nmrplade.c" "src/CMakeFiles/P1.dir/functions/scan_nmrplade.c.o" "gcc" "src/CMakeFiles/P1.dir/functions/scan_nmrplade.c.o.d"
-  "/Users/frederikskipper-andersen/CLionProjects/P1Secondbranch/src/main.c" "src/CMakeFiles/P1.dir/main.c.o" "gcc" "src/CMakeFiles/P1.dir/main.c.o.d"
+  "/Users/frederikskipper-andersen/CLionProjects/P1AGAIN/src/functions/beregn_p_plads.c" "src/CMakeFiles/P1.dir/functions/beregn_p_plads.c.o" "gcc" "src/CMakeFiles/P1.dir/functions/beregn_p_plads.c.o.d"
+  "/Users/frederikskipper-andersen/CLionProjects/P1AGAIN/src/functions/scan_nmrplade.c" "src/CMakeFiles/P1.dir/functions/scan_nmrplade.c.o" "gcc" "src/CMakeFiles/P1.dir/functions/scan_nmrplade.c.o.d"
+  "/Users/frederikskipper-andersen/CLionProjects/P1AGAIN/src/main.c" "src/CMakeFiles/P1.dir/main.c.o" "gcc" "src/CMakeFiles/P1.dir/main.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

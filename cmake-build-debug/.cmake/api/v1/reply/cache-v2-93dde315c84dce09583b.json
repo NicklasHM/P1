@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/frederikskipper-andersen/CLionProjects/P1Secondbranch/cmake-build-debug"
+			"value" : "/Users/frederikskipper-andersen/CLionProjects/P1AGAIN/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -383,7 +383,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/frederikskipper-andersen/CLionProjects/P1Secondbranch/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/Users/frederikskipper-andersen/CLionProjects/P1AGAIN/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -443,7 +443,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/frederikskipper-andersen/CLionProjects/P1Secondbranch"
+			"value" : "/Users/frederikskipper-andersen/CLionProjects/P1AGAIN"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -727,7 +727,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "P1"
+			"value" : "P1AGAIN"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1026,6 +1026,42 @@
 			"value" : "FALSE"
 		},
 		{
+			"name" : "P1AGAIN_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/Users/frederikskipper-andersen/CLionProjects/P1AGAIN/cmake-build-debug"
+		},
+		{
+			"name" : "P1AGAIN_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "P1AGAIN_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/Users/frederikskipper-andersen/CLionProjects/P1AGAIN"
+		},
+		{
 			"name" : "P1_BINARY_DIR",
 			"properties" : 
 			[
@@ -1035,7 +1071,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/frederikskipper-andersen/CLionProjects/P1Secondbranch/cmake-build-debug"
+			"value" : "/Users/frederikskipper-andersen/CLionProjects/P1AGAIN/cmake-build-debug"
 		},
 		{
 			"name" : "P1_IS_TOP_LEVEL",
@@ -1059,7 +1095,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/frederikskipper-andersen/CLionProjects/P1Secondbranch"
+			"value" : "/Users/frederikskipper-andersen/CLionProjects/P1AGAIN"
 		}
 	],
 	"kind" : "cache",
