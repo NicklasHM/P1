@@ -1,4 +1,7 @@
 #include "beregn_p_plads.h"
+#include <sqlite3.h>
+#include <stdio.h>
+
 // -----------------------------------------------
 // Funktioner til heap-operationer
 // -----------------------------------------------
@@ -97,6 +100,57 @@ void indsætAlleHeaps(PriorityQueue *afstandHeap, PriorityQueue *tidHeap, Priori
 // -----------------------------------------------
 // Læs data fra fil
 // -----------------------------------------------
+
+
+
+// Function to read data from the database
+void læsDataFraDatabase(const char *dbFilnavn, PriorityQueue *afstandHeap, PriorityQueue *tidHeap, PriorityQueue *ledighedHeap,
+                        Parkeringsplads pladser[], int *antalPladser, int præferenceHandicap, int præferenceEl) {
+    sqlite3 *db;
+    sqlite3_stmt *stmt;
+    int rc;
+    int index = 0;
+
+    // Open the database
+    rc = sqlite3_open(dbFilnavn, &db);
+    if (rc) {
+        printf("Kan ikke åbne databasen: %s\n", sqlite3_errmsg(db));
+        exit(1);
+    }
+
+    // Prepare the SQL query with a condition to ensure valid parking spots
+    const char *sql = "SELECT Parkeringspladsnummer, Distance, Tid, Ledighed, Handicap, El FROM Parking WHERE Parkeringspladsnummer <= 174";
+    rc = sqlite3_prepare_v2(db, sql, -1, &stmt, 0);
+    if (rc != SQLITE_OK) {
+        printf("SQL fejl: %s\n", sqlite3_errmsg(db));
+        sqlite3_close(db);
+        exit(1);
+    }
+
+    // Execute the query and process the results
+    while (sqlite3_step(stmt) == SQLITE_ROW) {
+        Parkeringsplads p;
+        p.nummer = sqlite3_column_int(stmt, 0);
+        p.distance = sqlite3_column_int(stmt, 1);
+        p.tid = sqlite3_column_int(stmt, 2);  // Assuming 'Tid' is the third column
+        p.ledighed = sqlite3_column_int(stmt, 3);
+        p.handicap = sqlite3_column_int(stmt, 4);
+        p.el = sqlite3_column_int(stmt, 5);
+
+        pladser[index++] = p;
+        indsætAlleHeaps(afstandHeap, tidHeap, ledighedHeap, p, pladser, index, præferenceHandicap, præferenceEl);
+    }
+
+    *antalPladser = index;
+
+    // Finalize the statement and close the database
+    sqlite3_finalize(stmt);
+    sqlite3_close(db);
+}
+
+
+
+/*
 void læsDataFraFil(const char *filnavn, PriorityQueue *afstandHeap, PriorityQueue *tidHeap, PriorityQueue *ledighedHeap,
                    Parkeringsplads pladser[], int *antalPladser, int præferenceHandicap, int præferenceEl) {
     FILE *fil = fopen(filnavn, "r");
@@ -118,3 +172,4 @@ void læsDataFraFil(const char *filnavn, PriorityQueue *afstandHeap, PriorityQue
     *antalPladser = index;
     fclose(fil);
 }
+*/

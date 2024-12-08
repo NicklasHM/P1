@@ -1,37 +1,27 @@
 cmake_minimum_required(VERSION 3.29)
-project(P1AGAIN C)
+project(P1Again C)
 
-set(CMAKE_C_STANDARD 99)
+Set(CMAKE_C_STANDARD 99)
 
-# Set the SQLite3 include and library paths
-include_directories(/opt/homebrew/opt/sqlite/include)
-link_directories(/opt/homebrew/opt/sqlite/lib)
+find_package(SQLite3 REQUIRED)
 
-# Add the source files for the main program
-set(SOURCES
+add_executable(Database
         src/Database/database.c
         src/Database/simulateLedighed.c
         src/Database/updateLedighed.c
 )
+target_link_libraries(Database ${SQLite3_LIBRARIES} pthread)
 
-# Create the main executable target
-add_executable(Database ${SOURCES})
-
-# Create the DatabaseOnly executable target
 add_executable(DatabaseTemp
         src/Database/database.c
         src/Database/simulateLedighed.c
         src/Database/updateLedighed.c
 )
+target_link_libraries(DatabaseTemp ${SQLite3_LIBRARIES} pthread)
 
-# Link the SQLite3 and pthread libraries to the targets
-target_link_libraries(Database sqlite3 pthread)
-target_link_libraries(DatabaseTemp sqlite3 pthread)
-
-
-enable_testing()
-
-add_subdirectory(src)
-
-
-
+add_executable(Main
+        src/main.c
+        src/functions/beregn_p_plads.c
+        src/functions/scan_nmrplade.c
+)
+target_link_libraries(Main ${SQLite3_LIBRARIES} pthread)

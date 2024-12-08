@@ -57,23 +57,13 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/frederikskipper-andersen/CLionProjects/P1AGAIN
+CMAKE_SOURCE_DIR = /Users/frederikskipper-andersen/CLionProjects/P1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/frederikskipper-andersen/CLionProjects/P1AGAIN/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/frederikskipper-andersen/CLionProjects/P1/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -97,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/frederikskipper-andersen/CLionProjects/P1AGAIN/cmake-build-debug/CMakeFiles /Users/frederikskipper-andersen/CLionProjects/P1AGAIN/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/frederikskipper-andersen/CLionProjects/P1/cmake-build-debug/CMakeFiles /Users/frederikskipper-andersen/CLionProjects/P1/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/frederikskipper-andersen/CLionProjects/P1AGAIN/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/frederikskipper-andersen/CLionProjects/P1/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -153,30 +143,17 @@ DatabaseTemp/fast:
 .PHONY : DatabaseTemp/fast
 
 #=============================================================================
-# Target rules for targets named P1
+# Target rules for targets named Main
 
 # Build rule for target.
-P1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 P1
-.PHONY : P1
+Main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Main
+.PHONY : Main
 
 # fast build rule for target.
-P1/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/P1.dir/build.make src/CMakeFiles/P1.dir/build
-.PHONY : P1/fast
-
-#=============================================================================
-# Target rules for targets named my_test
-
-# Build rule for target.
-my_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_test
-.PHONY : my_test
-
-# fast build rule for target.
-my_test/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/my_test.dir/build.make src/CMakeFiles/my_test.dir/build
-.PHONY : my_test/fast
+Main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/build
+.PHONY : Main/fast
 
 src/Database/database.o: src/Database/database.c.o
 .PHONY : src/Database/database.o
@@ -259,6 +236,78 @@ src/Database/updateLedighed.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DatabaseTemp.dir/build.make CMakeFiles/DatabaseTemp.dir/src/Database/updateLedighed.c.s
 .PHONY : src/Database/updateLedighed.c.s
 
+src/functions/beregn_p_plads.o: src/functions/beregn_p_plads.c.o
+.PHONY : src/functions/beregn_p_plads.o
+
+# target to build an object file
+src/functions/beregn_p_plads.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/functions/beregn_p_plads.c.o
+.PHONY : src/functions/beregn_p_plads.c.o
+
+src/functions/beregn_p_plads.i: src/functions/beregn_p_plads.c.i
+.PHONY : src/functions/beregn_p_plads.i
+
+# target to preprocess a source file
+src/functions/beregn_p_plads.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/functions/beregn_p_plads.c.i
+.PHONY : src/functions/beregn_p_plads.c.i
+
+src/functions/beregn_p_plads.s: src/functions/beregn_p_plads.c.s
+.PHONY : src/functions/beregn_p_plads.s
+
+# target to generate assembly for a file
+src/functions/beregn_p_plads.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/functions/beregn_p_plads.c.s
+.PHONY : src/functions/beregn_p_plads.c.s
+
+src/functions/scan_nmrplade.o: src/functions/scan_nmrplade.c.o
+.PHONY : src/functions/scan_nmrplade.o
+
+# target to build an object file
+src/functions/scan_nmrplade.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/functions/scan_nmrplade.c.o
+.PHONY : src/functions/scan_nmrplade.c.o
+
+src/functions/scan_nmrplade.i: src/functions/scan_nmrplade.c.i
+.PHONY : src/functions/scan_nmrplade.i
+
+# target to preprocess a source file
+src/functions/scan_nmrplade.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/functions/scan_nmrplade.c.i
+.PHONY : src/functions/scan_nmrplade.c.i
+
+src/functions/scan_nmrplade.s: src/functions/scan_nmrplade.c.s
+.PHONY : src/functions/scan_nmrplade.s
+
+# target to generate assembly for a file
+src/functions/scan_nmrplade.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/functions/scan_nmrplade.c.s
+.PHONY : src/functions/scan_nmrplade.c.s
+
+src/main.o: src/main.c.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/main.c.o
+.PHONY : src/main.c.o
+
+src/main.i: src/main.c.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/main.c.i
+.PHONY : src/main.c.i
+
+src/main.s: src/main.c.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/main.c.s
+.PHONY : src/main.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -267,11 +316,9 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... test"
 	@echo "... Database"
 	@echo "... DatabaseTemp"
-	@echo "... P1"
-	@echo "... my_test"
+	@echo "... Main"
 	@echo "... src/Database/database.o"
 	@echo "... src/Database/database.i"
 	@echo "... src/Database/database.s"
@@ -281,6 +328,15 @@ help:
 	@echo "... src/Database/updateLedighed.o"
 	@echo "... src/Database/updateLedighed.i"
 	@echo "... src/Database/updateLedighed.s"
+	@echo "... src/functions/beregn_p_plads.o"
+	@echo "... src/functions/beregn_p_plads.i"
+	@echo "... src/functions/beregn_p_plads.s"
+	@echo "... src/functions/scan_nmrplade.o"
+	@echo "... src/functions/scan_nmrplade.i"
+	@echo "... src/functions/scan_nmrplade.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 
