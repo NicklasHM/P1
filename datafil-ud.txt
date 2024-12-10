@@ -1,5 +1,0 @@
-Bedste parkeringsplads:
-Parkeringspladsnummer: 1
-Distance: 10 meter
-Handicap: 1
-El: 0

@@ -1,14 +1,150 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "beregn_p_plads.h"
-// -----------------------------------------------
-// Funktioner til heap-operationer
-// -----------------------------------------------
+
+/**
+ * Læser parkeringsdata fra en fil og initialiserer prioritetskøer og pladser.
+ *
+ * - Parser hver linje i filen og opretter en parkeringsplads.
+ * - Tilføjer hver plads til arrayet `pladser` og prioritetskøerne.
+ *
+ * @param filnavn Navnet på datafilen.
+ * @param afstandHeap Heap baseret på afstand.
+ * @param tidHeap Heap baseret på tid.
+ * @param ledighedHeap Heap baseret på ledighed.
+ * @param pladser Array af parkeringspladser.
+ * @param antalPladser Pointer til antal pladser i arrayet.
+ * @param præferenceHandicap Brugerens præference for handicappladser.
+ * @param præferenceEl Brugerens præference for el-pladser.
+ */
+void læsDataFraFil(const char *filnavn, PriorityQueue *afstandHeap, PriorityQueue *tidHeap, PriorityQueue *ledighedHeap,
+                   Parkeringsplads pladser[], int *antalPladser, int præferenceHandicap, int præferenceEl) {
+    FILE *fil = fopen(filnavn, "r");
+    if (fil == NULL) {
+        printf("Kunne ikke åbne filen: %s\n", filnavn);
+        exit(1); // Afslut programmet, hvis filen ikke kan åbnes
+    }
+
+    char linje[256];
+    int index = 0;
+
+    while (fgets(linje, sizeof(linje), fil)) {
+        Parkeringsplads p;
+
+        // Læs data fra linjen og initialiser parkeringsplads
+        sscanf(linje, "Parkeringsplads: %d Handicap: %d El: %d Distance: %lf Tid: %d Ledighed: %d",
+               &p.nummer, &p.handicap, &p.el, &p.distance, &p.tid, &p.ledighed);
+
+        // Konverter ledighedsstatus (0 = ledig, 1 = optaget)
+        p.ledighed = p.ledighed == 0 ? 1 : 0;
+
+        // Tilføj pladsen til arrayet
+        pladser[index++] = p;
+
+        // Indsæt pladsen i prioritetskøerne
+        indsætAlleHeaps(afstandHeap, tidHeap, ledighedHeap, p, pladser, index, præferenceHandicap, præferenceEl);
+    }
+
+    *antalPladser = index; // Opdater det samlede antal pladser
+    fclose(fil); // Luk filen
+}
+
+/**
+ * Indsætter en parkeringsplads i alle prioritetskøer.
+ *
+ * - Beregner scores for afstand, tid og ledighed.
+ * - Tilføjer pladsen til de relevante heaps.
+ *
+ * @param afstandHeap Heap rangeret efter afstand.
+ * @param tidHeap Heap rangeret efter tid.
+ * @param ledighedHeap Heap rangeret efter ledighed.
+ * @param plads Parkeringspladsen der skal indsættes.
+ * @param pladser Array af parkeringspladser.
+ * @param antalPladser Antallet af parkeringspladser.
+ * @param præferenceHandicap Brugerens præference for handicappladser.
+ * @param præferenceEl Brugerens præference for el-pladser.
+ */
+void indsætAlleHeaps(PriorityQueue *afstandHeap, PriorityQueue *tidHeap, PriorityQueue *ledighedHeap,
+                     Parkeringsplads plads, Parkeringsplads pladser[], int antalPladser, int præferenceHandicap, int præferenceEl) {
+    int scoreAfstand = beregnAfstandScore(plads);
+    int scoreTid = beregnTidScore(plads);
+    int scoreLedighed = beregnLedighedScore(plads, pladser, antalPladser, præferenceHandicap, præferenceEl);
+
+    insert(afstandHeap, plads, scoreAfstand);
+    insert(tidHeap, plads, scoreTid);
+    insert(ledighedHeap, plads, scoreLedighed);
+}
+
+/**
+ * Beregner afstandsscoren for en parkeringsplads.
+ * Mindre afstand giver højere prioritet.
+ *
+ * @param p Parkeringspladsen der evalueres.
+ * @return Afstandsscore.
+ */
+int beregnAfstandScore(Parkeringsplads p) {
+    return (int)(-p.distance); // Mindre afstand = højere prioritet / Negativ afstand for at prioritere mindre afstande
+}
+
+/**
+ * Beregner tidsscoren for en parkeringsplads.
+ * Mindre tid giver højere prioritet.
+ *
+ * @param p Parkeringspladsen der evalueres.
+ * @return Tidsscore.
+ */
+int beregnTidScore(Parkeringsplads p) {
+    return -p.tid; // Mindre tid = højere prioritet
+}
+
+/**
+ * Beregner ledighedsscoren for en parkeringsplads.
+ * Bruges til at prioritere baseret på naboer og brugerpræferencer.
+ *
+ * @param p Parkeringspladsen der evalueres.
+ * @param pladser Array af parkeringspladser.
+ * @param antalPladser Antallet af parkeringspladser.
+ * @param præferenceHandicap Brugerens præference for handicappladser.
+ * @param præferenceEl Brugerens præference for el-pladser.
+ * @return Ledighedsscore.
+ */
+int beregnLedighedScore(Parkeringsplads p, Parkeringsplads pladser[], int antalPladser, int præferenceHandicap, int præferenceEl) {
+    // Prioritering baseret på brugerpræferencer
+    if (præferenceHandicap && !p.handicap) {
+        return -1000; // Lav prioritet for ikke-handicap pladser
+    }
+    if (præferenceEl && !p.el) {
+        return -1000; // Lav prioritet for ikke-el-pladser
+    }
+
+    // Kontroller omkringliggende pladser for ledighed
+    int ledigeNaboer = 0;
+    for (int i = 0; i < antalPladser; i++) {
+        if (pladser[i].nummer == p.nummer - 1 || pladser[i].nummer == p.nummer + 1) {
+            if (pladser[i].ledighed == 0) {
+                ledigeNaboer++;
+            }
+        }
+    }
+
+    // Høj prioritet for pladser med flere ledige naboer // Flere ledige naboer giver højere prioritet
+    return ledigeNaboer * 10 - (p.ledighed * 50);
+}
+
+/**
+ * Indsætter en parkeringsplads i en prioritetskø baseret på dens score.
+ *
+ * @param pq Prioritetskøen hvor pladsen skal indsættes.
+ * @param plads Parkeringspladsen der skal indsættes.
+ * @param score Prioritetsscore.
+ */
 void insert(PriorityQueue *pq, Parkeringsplads plads, int score) {
     pq->data[pq->size].plads = plads;
     pq->data[pq->size].score = score;
     int i = pq->size;
     pq->size++;
 
-    // Heapify up
+    // Reparer heapen (heapify up)
     while (i > 0 && pq->data[i].score > pq->data[(i - 1) / 2].score) {
         HeapNode temp = pq->data[i];
         pq->data[i] = pq->data[(i - 1) / 2];
@@ -16,13 +152,18 @@ void insert(PriorityQueue *pq, Parkeringsplads plads, int score) {
         i = (i - 1) / 2;
     }
 }
-
+/**
+ * Fjerner og returnerer noden med højeste prioritet fra en prioritetskø.
+ *
+ * @param pq Prioritetskøen hvorfra noden fjernes.
+ * @return Noden med højeste prioritet.
+ */
 HeapNode extractMax(PriorityQueue *pq) {
     HeapNode maxNode = pq->data[0];
     pq->data[0] = pq->data[pq->size - 1];
     pq->size--;
 
-    // Heapify down
+    // Reparer heapen (heapify down)
     int i = 0;
     while (2 * i + 1 < pq->size) {
         int maxIndex = i;
@@ -43,78 +184,3 @@ HeapNode extractMax(PriorityQueue *pq) {
     return maxNode;
 }
 
-// -----------------------------------------------
-// Funktioner til scoringsberegning
-// -----------------------------------------------
-int beregnAfstandScore(Parkeringsplads p) {
-    return -p.distance; // Mindre afstand = højere prioritet
-}
-
-int beregnTidScore(Parkeringsplads p) {
-    return -(p.distance * 2); // Eksempel: Tid proportional med afstand
-}
-
-int omkringliggendeLedighed(Parkeringsplads p, Parkeringsplads pladser[], int antalPladser) {
-    for (int i = 0; i < antalPladser; i++) {
-        if (pladser[i].nummer == p.nummer - 1 || pladser[i].nummer == p.nummer + 1) {
-            if (pladser[i].ledighed == 0) {
-                return 0; // Omkringliggende plads er optaget
-            }
-        }
-    }
-    return 1; // Alle omkringliggende pladser er ledige
-}
-
-int beregnLedighedScore(Parkeringsplads p, Parkeringsplads pladser[], int antalPladser, int præferenceHandicap, int præferenceEl) {
-    if (præferenceHandicap && p.handicap == 0) {
-        return -1000; // Lav prioritet for ikke-handicap pladser
-    }
-    if (præferenceEl && p.el == 0) {
-        return -1000; // Lav prioritet for ikke-el-pladser
-    }
-
-    if (omkringliggendeLedighed(p, pladser, antalPladser)) {
-        return 100; // Høj prioritet for pladser med ledige omgivelser
-    } else {
-        return 50; // Lavere prioritet for pladser med optagne omgivelser
-    }
-}
-
-// -----------------------------------------------
-// Indsæt plads i alle heaps
-// -----------------------------------------------
-void indsætAlleHeaps(PriorityQueue *afstandHeap, PriorityQueue *tidHeap, PriorityQueue *ledighedHeap,
-                     Parkeringsplads p, Parkeringsplads pladser[], int antalPladser, int præferenceHandicap, int præferenceEl) {
-    int scoreAfstand = beregnAfstandScore(p);
-    int scoreTid = beregnTidScore(p);
-    int scoreLedighed = beregnLedighedScore(p, pladser, antalPladser, præferenceHandicap, præferenceEl);
-
-    insert(afstandHeap, p, scoreAfstand);
-    insert(tidHeap, p, scoreTid);
-    insert(ledighedHeap, p, scoreLedighed);
-}
-
-// -----------------------------------------------
-// Læs data fra fil
-// -----------------------------------------------
-void læsDataFraFil(const char *filnavn, PriorityQueue *afstandHeap, PriorityQueue *tidHeap, PriorityQueue *ledighedHeap,
-                   Parkeringsplads pladser[], int *antalPladser, int præferenceHandicap, int præferenceEl) {
-    FILE *fil = fopen(filnavn, "r");
-    if (fil == NULL) {
-        printf("Kunne ikke åbne filen: %s\n", filnavn);
-        exit(1);
-    }
-
-    char linje[256];
-    int index = 0;
-    while (fgets(linje, sizeof(linje), fil)) {
-        Parkeringsplads p;
-        sscanf(linje, "Parkeringspladsnummer: %d, Distance: %d meter, Ledighed: %d, Handicap: %d, El: %d",
-               &p.nummer, &p.distance, &p.ledighed, &p.handicap, &p.el);
-        pladser[index++] = p;
-        indsætAlleHeaps(afstandHeap, tidHeap, ledighedHeap, p, pladser, *antalPladser, præferenceHandicap, præferenceEl);
-    }
-
-    *antalPladser = index;
-    fclose(fil);
-}

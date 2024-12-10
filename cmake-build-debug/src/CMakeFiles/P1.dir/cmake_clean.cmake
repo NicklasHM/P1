@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/P1.dir/functions/beregn_p_plads.c.o.d"
   "CMakeFiles/P1.dir/functions/scan_nmrplade.c.o"
   "CMakeFiles/P1.dir/functions/scan_nmrplade.c.o.d"
+  "CMakeFiles/P1.dir/functions/simulering.c.o"
+  "CMakeFiles/P1.dir/functions/simulering.c.o.d"
   "CMakeFiles/P1.dir/main.c.o"
   "CMakeFiles/P1.dir/main.c.o.d"
   "P1"
