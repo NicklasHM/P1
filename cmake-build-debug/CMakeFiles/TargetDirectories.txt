@@ -1,8 +1,5 @@
-/Users/frederikskipper-andersen/CLionProjects/P1Secondbranch/cmake-build-debug/CMakeFiles/test.dir
-/Users/frederikskipper-andersen/CLionProjects/P1Secondbranch/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/frederikskipper-andersen/CLionProjects/P1Secondbranch/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/frederikskipper-andersen/CLionProjects/P1Secondbranch/cmake-build-debug/src/CMakeFiles/P1.dir
-/Users/frederikskipper-andersen/CLionProjects/P1Secondbranch/cmake-build-debug/src/CMakeFiles/my_test.dir
-/Users/frederikskipper-andersen/CLionProjects/P1Secondbranch/cmake-build-debug/src/CMakeFiles/test.dir
-/Users/frederikskipper-andersen/CLionProjects/P1Secondbranch/cmake-build-debug/src/CMakeFiles/edit_cache.dir
-/Users/frederikskipper-andersen/CLionProjects/P1Secondbranch/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir
+/Users/frederikskipper-andersen/CLionProjects/P1Again2/cmake-build-debug/CMakeFiles/Database.dir
+/Users/frederikskipper-andersen/CLionProjects/P1Again2/cmake-build-debug/CMakeFiles/DatabaseTemp.dir
+/Users/frederikskipper-andersen/CLionProjects/P1Again2/cmake-build-debug/CMakeFiles/Main.dir
+/Users/frederikskipper-andersen/CLionProjects/P1Again2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/frederikskipper-andersen/CLionProjects/P1Again2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

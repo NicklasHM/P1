@@ -1,10 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /Users/frederikskipper-andersen/CLionProjects/P1Secondbranch -B /Users/frederikskipper-andersen/CLionProjects/P1Secondbranch/cmake-build-debug
--- The C compiler identification is AppleClang 15.0.0.15000309
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc - skipped
--- Detecting C compile features
--- Detecting C compile features - done
--- Configuring done (0.4s)
+/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /Users/frederikskipper-andersen/CLionProjects/P1Again2 -B /Users/frederikskipper-andersen/CLionProjects/P1Again2/cmake-build-debug
+-- Configuring done (0.0s)
 -- Generating done (0.0s)
--- Build files have been written to: /Users/frederikskipper-andersen/CLionProjects/P1Secondbranch/cmake-build-debug
+-- Build files have been written to: /Users/frederikskipper-andersen/CLionProjects/P1Again2/cmake-build-debug
