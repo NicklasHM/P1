@@ -53,10 +53,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/frederikskipper-andersen/CLionProjects/P1Again2
+CMAKE_SOURCE_DIR = /Users/frederikskipper-andersen/CLionProjects/P1-nu
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/frederikskipper-andersen/CLionProjects/P1Again2/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/frederikskipper-andersen/CLionProjects/P1-nu/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Main.dir/depend.make
@@ -70,60 +70,60 @@ include CMakeFiles/Main.dir/progress.make
 include CMakeFiles/Main.dir/flags.make
 
 CMakeFiles/Main.dir/src/main.c.o: CMakeFiles/Main.dir/flags.make
-CMakeFiles/Main.dir/src/main.c.o: /Users/frederikskipper-andersen/CLionProjects/P1Again2/src/main.c
+CMakeFiles/Main.dir/src/main.c.o: /Users/frederikskipper-andersen/CLionProjects/P1-nu/src/main.c
 CMakeFiles/Main.dir/src/main.c.o: CMakeFiles/Main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/frederikskipper-andersen/CLionProjects/P1Again2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Main.dir/src/main.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Main.dir/src/main.c.o -MF CMakeFiles/Main.dir/src/main.c.o.d -o CMakeFiles/Main.dir/src/main.c.o -c /Users/frederikskipper-andersen/CLionProjects/P1Again2/src/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/frederikskipper-andersen/CLionProjects/P1-nu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Main.dir/src/main.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Main.dir/src/main.c.o -MF CMakeFiles/Main.dir/src/main.c.o.d -o CMakeFiles/Main.dir/src/main.c.o -c /Users/frederikskipper-andersen/CLionProjects/P1-nu/src/main.c
 
 CMakeFiles/Main.dir/src/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Main.dir/src/main.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/frederikskipper-andersen/CLionProjects/P1Again2/src/main.c > CMakeFiles/Main.dir/src/main.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/frederikskipper-andersen/CLionProjects/P1-nu/src/main.c > CMakeFiles/Main.dir/src/main.c.i
 
 CMakeFiles/Main.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Main.dir/src/main.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/frederikskipper-andersen/CLionProjects/P1Again2/src/main.c -o CMakeFiles/Main.dir/src/main.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/frederikskipper-andersen/CLionProjects/P1-nu/src/main.c -o CMakeFiles/Main.dir/src/main.c.s
 
 CMakeFiles/Main.dir/src/functions/beregn_p_plads.c.o: CMakeFiles/Main.dir/flags.make
-CMakeFiles/Main.dir/src/functions/beregn_p_plads.c.o: /Users/frederikskipper-andersen/CLionProjects/P1Again2/src/functions/beregn_p_plads.c
+CMakeFiles/Main.dir/src/functions/beregn_p_plads.c.o: /Users/frederikskipper-andersen/CLionProjects/P1-nu/src/functions/beregn_p_plads.c
 CMakeFiles/Main.dir/src/functions/beregn_p_plads.c.o: CMakeFiles/Main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/frederikskipper-andersen/CLionProjects/P1Again2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Main.dir/src/functions/beregn_p_plads.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Main.dir/src/functions/beregn_p_plads.c.o -MF CMakeFiles/Main.dir/src/functions/beregn_p_plads.c.o.d -o CMakeFiles/Main.dir/src/functions/beregn_p_plads.c.o -c /Users/frederikskipper-andersen/CLionProjects/P1Again2/src/functions/beregn_p_plads.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/frederikskipper-andersen/CLionProjects/P1-nu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Main.dir/src/functions/beregn_p_plads.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Main.dir/src/functions/beregn_p_plads.c.o -MF CMakeFiles/Main.dir/src/functions/beregn_p_plads.c.o.d -o CMakeFiles/Main.dir/src/functions/beregn_p_plads.c.o -c /Users/frederikskipper-andersen/CLionProjects/P1-nu/src/functions/beregn_p_plads.c
 
 CMakeFiles/Main.dir/src/functions/beregn_p_plads.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Main.dir/src/functions/beregn_p_plads.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/frederikskipper-andersen/CLionProjects/P1Again2/src/functions/beregn_p_plads.c > CMakeFiles/Main.dir/src/functions/beregn_p_plads.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/frederikskipper-andersen/CLionProjects/P1-nu/src/functions/beregn_p_plads.c > CMakeFiles/Main.dir/src/functions/beregn_p_plads.c.i
 
 CMakeFiles/Main.dir/src/functions/beregn_p_plads.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Main.dir/src/functions/beregn_p_plads.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/frederikskipper-andersen/CLionProjects/P1Again2/src/functions/beregn_p_plads.c -o CMakeFiles/Main.dir/src/functions/beregn_p_plads.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/frederikskipper-andersen/CLionProjects/P1-nu/src/functions/beregn_p_plads.c -o CMakeFiles/Main.dir/src/functions/beregn_p_plads.c.s
 
 CMakeFiles/Main.dir/src/functions/scan_nmrplade.c.o: CMakeFiles/Main.dir/flags.make
-CMakeFiles/Main.dir/src/functions/scan_nmrplade.c.o: /Users/frederikskipper-andersen/CLionProjects/P1Again2/src/functions/scan_nmrplade.c
+CMakeFiles/Main.dir/src/functions/scan_nmrplade.c.o: /Users/frederikskipper-andersen/CLionProjects/P1-nu/src/functions/scan_nmrplade.c
 CMakeFiles/Main.dir/src/functions/scan_nmrplade.c.o: CMakeFiles/Main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/frederikskipper-andersen/CLionProjects/P1Again2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Main.dir/src/functions/scan_nmrplade.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Main.dir/src/functions/scan_nmrplade.c.o -MF CMakeFiles/Main.dir/src/functions/scan_nmrplade.c.o.d -o CMakeFiles/Main.dir/src/functions/scan_nmrplade.c.o -c /Users/frederikskipper-andersen/CLionProjects/P1Again2/src/functions/scan_nmrplade.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/frederikskipper-andersen/CLionProjects/P1-nu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Main.dir/src/functions/scan_nmrplade.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Main.dir/src/functions/scan_nmrplade.c.o -MF CMakeFiles/Main.dir/src/functions/scan_nmrplade.c.o.d -o CMakeFiles/Main.dir/src/functions/scan_nmrplade.c.o -c /Users/frederikskipper-andersen/CLionProjects/P1-nu/src/functions/scan_nmrplade.c
 
 CMakeFiles/Main.dir/src/functions/scan_nmrplade.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Main.dir/src/functions/scan_nmrplade.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/frederikskipper-andersen/CLionProjects/P1Again2/src/functions/scan_nmrplade.c > CMakeFiles/Main.dir/src/functions/scan_nmrplade.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/frederikskipper-andersen/CLionProjects/P1-nu/src/functions/scan_nmrplade.c > CMakeFiles/Main.dir/src/functions/scan_nmrplade.c.i
 
 CMakeFiles/Main.dir/src/functions/scan_nmrplade.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Main.dir/src/functions/scan_nmrplade.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/frederikskipper-andersen/CLionProjects/P1Again2/src/functions/scan_nmrplade.c -o CMakeFiles/Main.dir/src/functions/scan_nmrplade.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/frederikskipper-andersen/CLionProjects/P1-nu/src/functions/scan_nmrplade.c -o CMakeFiles/Main.dir/src/functions/scan_nmrplade.c.s
 
 CMakeFiles/Main.dir/src/functions/Simulation.c.o: CMakeFiles/Main.dir/flags.make
-CMakeFiles/Main.dir/src/functions/Simulation.c.o: /Users/frederikskipper-andersen/CLionProjects/P1Again2/src/functions/Simulation.c
+CMakeFiles/Main.dir/src/functions/Simulation.c.o: /Users/frederikskipper-andersen/CLionProjects/P1-nu/src/functions/Simulation.c
 CMakeFiles/Main.dir/src/functions/Simulation.c.o: CMakeFiles/Main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/frederikskipper-andersen/CLionProjects/P1Again2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Main.dir/src/functions/Simulation.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Main.dir/src/functions/Simulation.c.o -MF CMakeFiles/Main.dir/src/functions/Simulation.c.o.d -o CMakeFiles/Main.dir/src/functions/Simulation.c.o -c /Users/frederikskipper-andersen/CLionProjects/P1Again2/src/functions/Simulation.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/frederikskipper-andersen/CLionProjects/P1-nu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Main.dir/src/functions/Simulation.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Main.dir/src/functions/Simulation.c.o -MF CMakeFiles/Main.dir/src/functions/Simulation.c.o.d -o CMakeFiles/Main.dir/src/functions/Simulation.c.o -c /Users/frederikskipper-andersen/CLionProjects/P1-nu/src/functions/Simulation.c
 
 CMakeFiles/Main.dir/src/functions/Simulation.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Main.dir/src/functions/Simulation.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/frederikskipper-andersen/CLionProjects/P1Again2/src/functions/Simulation.c > CMakeFiles/Main.dir/src/functions/Simulation.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/frederikskipper-andersen/CLionProjects/P1-nu/src/functions/Simulation.c > CMakeFiles/Main.dir/src/functions/Simulation.c.i
 
 CMakeFiles/Main.dir/src/functions/Simulation.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Main.dir/src/functions/Simulation.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/frederikskipper-andersen/CLionProjects/P1Again2/src/functions/Simulation.c -o CMakeFiles/Main.dir/src/functions/Simulation.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/frederikskipper-andersen/CLionProjects/P1-nu/src/functions/Simulation.c -o CMakeFiles/Main.dir/src/functions/Simulation.c.s
 
 # Object files for target Main
 Main_OBJECTS = \
@@ -140,9 +140,9 @@ Main: CMakeFiles/Main.dir/src/functions/beregn_p_plads.c.o
 Main: CMakeFiles/Main.dir/src/functions/scan_nmrplade.c.o
 Main: CMakeFiles/Main.dir/src/functions/Simulation.c.o
 Main: CMakeFiles/Main.dir/build.make
-Main: /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/lib/libsqlite3.tbd
+Main: /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/lib/libsqlite3.tbd
 Main: CMakeFiles/Main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/frederikskipper-andersen/CLionProjects/P1Again2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable Main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/frederikskipper-andersen/CLionProjects/P1-nu/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable Main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -154,6 +154,6 @@ CMakeFiles/Main.dir/clean:
 .PHONY : CMakeFiles/Main.dir/clean
 
 CMakeFiles/Main.dir/depend:
-	cd /Users/frederikskipper-andersen/CLionProjects/P1Again2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/frederikskipper-andersen/CLionProjects/P1Again2 /Users/frederikskipper-andersen/CLionProjects/P1Again2 /Users/frederikskipper-andersen/CLionProjects/P1Again2/cmake-build-debug /Users/frederikskipper-andersen/CLionProjects/P1Again2/cmake-build-debug /Users/frederikskipper-andersen/CLionProjects/P1Again2/cmake-build-debug/CMakeFiles/Main.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/frederikskipper-andersen/CLionProjects/P1-nu/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/frederikskipper-andersen/CLionProjects/P1-nu /Users/frederikskipper-andersen/CLionProjects/P1-nu /Users/frederikskipper-andersen/CLionProjects/P1-nu/cmake-build-debug /Users/frederikskipper-andersen/CLionProjects/P1-nu/cmake-build-debug /Users/frederikskipper-andersen/CLionProjects/P1-nu/cmake-build-debug/CMakeFiles/Main.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/Main.dir/depend
 

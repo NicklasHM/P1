@@ -115,6 +115,9 @@ int beregnLedighedScore(Parkeringsplads p, Parkeringsplads pladser[], int antalP
 
 void indsætAlleHeaps(PriorityQueue *afstandHeap, PriorityQueue *tidHeap, PriorityQueue *ledighedHeap,
                      Parkeringsplads p, Parkeringsplads pladser[], int antalPladser, int præferenceHandicap, int præferenceEl) {
+    if ((!præferenceHandicap && p.handicap) || (!præferenceEl && p.el)) {
+        return;
+    }// Skip this parking spot if it doesn't match user preferences return;
     int scoreAfstand = beregnAfstandScore(p, præferenceHandicap, præferenceEl);
     int scoreTid = beregnTidScore(p, præferenceHandicap, præferenceEl);
     int scoreLedighed = beregnLedighedScore(p, pladser, antalPladser, præferenceHandicap, præferenceEl);
