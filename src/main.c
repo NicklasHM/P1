@@ -1,17 +1,30 @@
-#include "database/Opendatabase.h"
+#include "functions/Simulation.h"
 #include "functions/scan_nmrplade.h"
 #include "functions/beregn_p_plads.h"
 #include <sqlite3.h>
 #include <pthread.h>
-
-// tjekker branch111
-
+#include <stdio.h>
 // Hovedprogram
+
 int main() {
+    sqlite3 *db;
+    int rc = sqlite3_open("ParkingFacility.db", &db);
+    if (rc) {
+        fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
+        return 1;
+    }
+    // Start simulation thread
+    pthread_t simulationThread;
+    if (pthread_create(&simulationThread, NULL, simulateLedighed, (void *)db)) {
+        printf("Fejl ved oprettelse af simulerings-tråd\n");
+        sqlite3_close(db);
+        return 1;
+    }
+
     PriorityQueue afstandHeap = { .size = 0 };
     PriorityQueue tidHeap = { .size = 0 };
     PriorityQueue ledighedHeap = { .size = 0 };
-    Parkeringsplads pladser[258];
+    Parkeringsplads pladser[135];
     int antalPladser = 0;
 
     // Brugeren vælger præferencer
@@ -32,19 +45,39 @@ int main() {
     if (valg == 1) {
         printf("Bedste plads baseret på afstand: ");
         HeapNode bedsteAfstand = extractMax(&afstandHeap);
-        printf("Plads %d med afstand %d\n", bedsteAfstand.plads.nummer, -bedsteAfstand.score);
+        if (præferenceHandicap && bedsteAfstand.plads.handicap == 0) {
+            printf("Ingen ledige handicap-pladser fundet.\n");
+        } else {
+            printf("Plads %d med afstand %d\n", bedsteAfstand.plads.nummer, -bedsteAfstand.score);
+            // Change the ledighed status in the database for the selected parking space
+            ChangeLedighed(db, bedsteAfstand.plads.nummer, 0); // Mark the space as taken
+        }
     } else if (valg == 2) {
         printf("Bedste plads baseret på tid: ");
         HeapNode bedsteTid = extractMax(&tidHeap);
-        printf("Plads %d med tidsscore %d\n", bedsteTid.plads.nummer, -bedsteTid.score);
+        if (præferenceHandicap && bedsteTid.plads.handicap == 0) {
+            printf("Ingen ledige handicap-pladser fundet.\n");
+        } else {
+            printf("Plads %d med tidsscore %d\n", bedsteTid.plads.nummer, -bedsteTid.score);
+            ChangeLedighed(db, bedsteTid.plads.nummer, 0);
+        }
     } else if (valg == 3) {
         printf("Bedste plads baseret på ledighed: ");
         HeapNode bedsteLedighed = extractMax(&ledighedHeap);
-        printf("Plads %d med ledighedsscore %d\n", bedsteLedighed.plads.nummer, bedsteLedighed.score);
+        if (præferenceHandicap && bedsteLedighed.plads.handicap == 0) {
+            printf("Ingen ledige handicap-pladser fundet.\n");
+        } else {
+            printf("Plads %d med ledighedsscore %d\n", bedsteLedighed.plads.nummer, bedsteLedighed.score);
+            ChangeLedighed(db, bedsteLedighed.plads.nummer, 0);
+        }
     } else {
         printf("Ugyldigt valg.\n");
     }
+    // Wait for simulation thread to finish (if needed, or exit gracefully)
+    pthread_join(simulationThread, NULL);
+    sqlite3_close(db);
 }
+
 /*
     const char *filename = "Nummerplader.txt";
     FILE *file = fopen(filename, "a+");

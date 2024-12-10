@@ -57,10 +57,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/frederikskipper-andersen/CLionProjects/P1
+CMAKE_SOURCE_DIR = /Users/frederikskipper-andersen/CLionProjects/P1Again2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/frederikskipper-andersen/CLionProjects/P1/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/frederikskipper-andersen/CLionProjects/P1Again2/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/frederikskipper-andersen/CLionProjects/P1/cmake-build-debug/CMakeFiles /Users/frederikskipper-andersen/CLionProjects/P1/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/frederikskipper-andersen/CLionProjects/P1Again2/cmake-build-debug/CMakeFiles /Users/frederikskipper-andersen/CLionProjects/P1Again2/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/frederikskipper-andersen/CLionProjects/P1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/frederikskipper-andersen/CLionProjects/P1Again2/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -236,6 +236,30 @@ src/Database/updateLedighed.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DatabaseTemp.dir/build.make CMakeFiles/DatabaseTemp.dir/src/Database/updateLedighed.c.s
 .PHONY : src/Database/updateLedighed.c.s
 
+src/functions/Simulation.o: src/functions/Simulation.c.o
+.PHONY : src/functions/Simulation.o
+
+# target to build an object file
+src/functions/Simulation.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/functions/Simulation.c.o
+.PHONY : src/functions/Simulation.c.o
+
+src/functions/Simulation.i: src/functions/Simulation.c.i
+.PHONY : src/functions/Simulation.i
+
+# target to preprocess a source file
+src/functions/Simulation.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/functions/Simulation.c.i
+.PHONY : src/functions/Simulation.c.i
+
+src/functions/Simulation.s: src/functions/Simulation.c.s
+.PHONY : src/functions/Simulation.s
+
+# target to generate assembly for a file
+src/functions/Simulation.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/src/functions/Simulation.c.s
+.PHONY : src/functions/Simulation.c.s
+
 src/functions/beregn_p_plads.o: src/functions/beregn_p_plads.c.o
 .PHONY : src/functions/beregn_p_plads.o
 
@@ -328,6 +352,9 @@ help:
 	@echo "... src/Database/updateLedighed.o"
 	@echo "... src/Database/updateLedighed.i"
 	@echo "... src/Database/updateLedighed.s"
+	@echo "... src/functions/Simulation.o"
+	@echo "... src/functions/Simulation.i"
+	@echo "... src/functions/Simulation.s"
 	@echo "... src/functions/beregn_p_plads.o"
 	@echo "... src/functions/beregn_p_plads.i"
 	@echo "... src/functions/beregn_p_plads.s"

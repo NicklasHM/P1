@@ -8,8 +8,6 @@
 extern sqlite3 *db;
 
 // Function prototypes
-void updateLedighed(sqlite3 *db, const char* parkeringspladsnummer, int newLedighed);
 void* simulateLedighed(void* arg);
-
 
 #endif

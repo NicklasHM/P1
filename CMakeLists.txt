@@ -23,5 +23,6 @@ add_executable(Main
         src/main.c
         src/functions/beregn_p_plads.c
         src/functions/scan_nmrplade.c
+        src/functions/Simulation.c
 )
 target_link_libraries(Main ${SQLite3_LIBRARIES} pthread)

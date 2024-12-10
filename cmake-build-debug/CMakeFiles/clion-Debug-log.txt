@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /Users/frederikskipper-andersen/CLionProjects/P1 -B /Users/frederikskipper-andersen/CLionProjects/P1/cmake-build-debug
+/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /Users/frederikskipper-andersen/CLionProjects/P1Again2 -B /Users/frederikskipper-andersen/CLionProjects/P1Again2/cmake-build-debug
 -- Configuring done (0.0s)
 -- Generating done (0.0s)
--- Build files have been written to: /Users/frederikskipper-andersen/CLionProjects/P1/cmake-build-debug
+-- Build files have been written to: /Users/frederikskipper-andersen/CLionProjects/P1Again2/cmake-build-debug

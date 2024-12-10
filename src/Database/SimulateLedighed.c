@@ -10,7 +10,7 @@ extern sqlite3 *db;
 
 void* simulateLedighed(void* arg) {
     while (1) {
-        sleep(30);  // Sleep for 1 minute
+        sleep(60);  // Sleep for 1 minute
 
         sqlite3_stmt *stmt;
         const char* sqlSelect = "SELECT Parkeringspladsnummer, Ledighed FROM Parking;";
