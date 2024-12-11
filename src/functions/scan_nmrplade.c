@@ -1,36 +1,45 @@
+#include "scan_nmrplade.h"
 #include <stdio.h>
 #include <string.h>
-#include "scan_nmrplade.h"
 
-void scanNummerpladeOgGemPræferencer(const char *brugerdataFil) {
-    char nummerplade[20];
-    int præferenceHandicap, præferenceEl, præferenceKriterium;
+int line_exists(FILE *file, const char *input) {
+    char line[256];
+    rewind(file);
+    while (fgets(line, sizeof(line), file) != NULL) {
+        line[strcspn(line, "\r\n")] = 0; // Remove newline and carriage return
+        if (strncmp(line, input, strlen(input)) == 0 &&
+            (line[strlen(input)] == ' ' || line[strlen(input)] == '\0')) {
+            strncpy(input, line, 256);
+            return 1; // Line exists
+            }
+    }
+    return 0; // Linjen eksisterer ikke
+}
 
-    // Indtast nummerplade
-    printf("Indtast nummerpladen: ");
-    scanf("%s", nummerplade);
+void write_to_file(FILE *file, const char *input, int præferenceHandicap, int præferenceEl, int præferenceKriterium) {
+    if (input == NULL || input[0] == '\0') {
+        return;  // Do nothing if the input is empty or just a newline
+    }
+    if (line_exists(file, input)) {
+        printf("The numberplate '%s' is already registered.\n", input);
+    } else {
+        fprintf(file, "%s %d %d %d \n", input, præferenceHandicap, præferenceEl, præferenceKriterium);
 
-    // Indtast præferencer
-    printf("Ønsker du handicap-parkering? (1 = ja, 0 = nej): ");
-    scanf("%d", &præferenceHandicap);
-    printf("Ønsker du el-parkering? (1 = ja, 0 = nej): ");
-    scanf("%d", &præferenceEl);
+        fflush(file);
+    }
+}
 
-    // Indtast prioriteringskriterium
-    printf("Hvad vil du prioritere? (1 = afstand, 2 = tid, 3 = ledighed): ");
-    scanf("%d", &præferenceKriterium);
-
-    // Åbn filen for at gemme data
-    FILE *fil = fopen(brugerdataFil, "a");
-    if (fil == NULL) {
-        printf("Kunne ikke åbne filen: %s\n", brugerdataFil);
+void print_file_content(const char *filename) {
+    FILE *file = fopen(filename, "r");
+    if (file == NULL) {
+        printf("Error opening file '%s'!\n", filename);
         return;
     }
 
-    // Gem nummerpladen og præferencerne i filen
-    fprintf(fil, "Nummerplade: %s, Handicap: %d, El: %d, Kriterium: %d\n",
-            nummerplade, præferenceHandicap, præferenceEl, præferenceKriterium);
-    fclose(fil);
+    char line[256];
+    while (fgets(line, sizeof(line), file) != NULL) {
+        printf("%s", line); // Udskriver hver linje
+    }
 
-    printf("Nummerplade og præferencer er blevet gemt i brugerdata.txt.\n");
+    fclose(file);
 }
