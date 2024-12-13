@@ -56,7 +56,7 @@ int main() {
 
         if(hk) {
             for (int i = 0; i < antalPladser; i++) {
-                if (pladser[i].handicap == 1 && pladser[i].ledighed == 1) {
+                if (pladser[i].handicap == 1 && pladser[i].ledighed == 0) {
                     printf("Første ledige handicap-parkering: Plads %d, Afstand: %.2f meter\n",
                            pladser[i].nummer, pladser[i].distance);
                     return 0; // Stop programmet her
@@ -66,7 +66,7 @@ int main() {
             return 0;
         } if(el) {
             for (int i = 0; i < antalPladser; i++) {
-                if (pladser[i].el == 1 && pladser[i].ledighed == 1) {
+                if (pladser[i].el == 1 && pladser[i].ledighed == 0) {
                     printf("Første ledige el-parkering: Plads %d, Afstand: %.2f meter\n",
                            pladser[i].nummer, pladser[i].distance);
                     return 0; // Stop programmet her
@@ -79,7 +79,7 @@ int main() {
             case 1:
                 while (afstandHeap.size > 0) {
                     HeapNode bedsteAfstand = extractMax(&afstandHeap);
-                    if (bedsteAfstand.plads.handicap == 0 && bedsteAfstand.plads.el == 0 && bedsteAfstand.plads.ledighed == 1) {
+                    if (bedsteAfstand.plads.handicap == 0 && bedsteAfstand.plads.el == 0 && bedsteAfstand.plads.ledighed == 0) {
                         printf("Bedste plads baseret på afstand: Plads %d med afstand %.2f meter\n",
                                bedsteAfstand.plads.nummer, bedsteAfstand.plads.distance);
                         return 0;
@@ -90,7 +90,7 @@ int main() {
             case 2:
                 while (tidHeap.size > 0) {
                     HeapNode bedsteTid = extractMax(&tidHeap);
-                    if (bedsteTid.plads.handicap == 0 && bedsteTid.plads.el == 0 && bedsteTid.plads.ledighed == 1) {
+                    if (bedsteTid.plads.handicap == 0 && bedsteTid.plads.el == 0 && bedsteTid.plads.ledighed == 0) {
                         printf("Bedste plads baseret på tid: Plads %d med tid %d sekunder\n",
                                bedsteTid.plads.nummer, bedsteTid.plads.tid);
                         return 0;
@@ -101,7 +101,7 @@ int main() {
             case 3:
                 while (ledighedHeap.size > 0) {
                     HeapNode bedsteLedighed = extractMax(&ledighedHeap);
-                    if (bedsteLedighed.plads.handicap == 0 && bedsteLedighed.plads.el == 0 && bedsteLedighed.plads.ledighed == 1) {
+                    if (bedsteLedighed.plads.handicap == 0 && bedsteLedighed.plads.el == 0 && bedsteLedighed.plads.ledighed == 0) {
                         printf("Bedste plads baseret på ledighed: Plads %d med ledighed %d (lavere er bedre)\n",
                                bedsteLedighed.plads.nummer, bedsteLedighed.plads.ledighed);
                         return 0;
@@ -123,7 +123,7 @@ int main() {
         præferenceEl=0;
         write_to_file(file, input, præferenceHandicap, præferenceEl, præferenceKriterium);
         for (int i = 0; i < antalPladser; i++) {
-            if (pladser[i].handicap == 1 && pladser[i].ledighed == 1) {
+            if (pladser[i].handicap == 1 && pladser[i].ledighed == 0) {
                 printf("Første ledige handicap-parkering: Plads %d, Afstand: %.2f meter\n",
                        pladser[i].nummer, pladser[i].distance);
                 return 0; // Stop programmet her
@@ -144,7 +144,7 @@ int main() {
         Parkeringsplads nærmesteEl = { .distance = 1e9 }; // Sæt stor værdi som standard
         int fundet = 0;
         for (int i = 0; i < antalPladser; i++) {
-            if (pladser[i].el == 1 && pladser[i].ledighed == 1 && pladser[i].distance < nærmesteEl.distance) {
+            if (pladser[i].el == 1 && pladser[i].ledighed == 0 && pladser[i].distance < nærmesteEl.distance) {
                 nærmesteEl = pladser[i];
                 fundet = 1;
             }
@@ -167,7 +167,7 @@ int main() {
     if (præferenceKriterium == 1) {
         while (afstandHeap.size > 0) {
             HeapNode bedsteAfstand = extractMax(&afstandHeap);
-            if (bedsteAfstand.plads.handicap == 0 && bedsteAfstand.plads.el == 0 && bedsteAfstand.plads.ledighed == 1) {
+            if (bedsteAfstand.plads.handicap == 0 && bedsteAfstand.plads.el == 0 && bedsteAfstand.plads.ledighed == 0) {
                 printf("Bedste plads baseret på afstand: Plads %d med afstand %.2f meter\n",
                        bedsteAfstand.plads.nummer, bedsteAfstand.plads.distance);
                 return 0;
@@ -177,7 +177,7 @@ int main() {
     } else if (præferenceKriterium == 2) {
         while (tidHeap.size > 0) {
             HeapNode bedsteTid = extractMax(&tidHeap);
-            if (bedsteTid.plads.handicap == 0 && bedsteTid.plads.el == 0 && bedsteTid.plads.ledighed == 1) {
+            if (bedsteTid.plads.handicap == 0 && bedsteTid.plads.el == 0 && bedsteTid.plads.ledighed == 0) {
                 printf("Bedste plads baseret på tid: Plads %d med tid %d sekunder\n",
                        bedsteTid.plads.nummer, bedsteTid.plads.tid);
                 return 0;
@@ -187,7 +187,7 @@ int main() {
     } else if (præferenceKriterium == 3) {
         while (ledighedHeap.size > 0) {
             HeapNode bedsteLedighed = extractMax(&ledighedHeap);
-            if (bedsteLedighed.plads.handicap == 0 && bedsteLedighed.plads.el == 0 && bedsteLedighed.plads.ledighed == 1) {
+            if (bedsteLedighed.plads.handicap == 0 && bedsteLedighed.plads.el == 0 && bedsteLedighed.plads.ledighed == 0) {
                 printf("Bedste plads baseret på ledighed: Plads %d med ledighed %d (lavere er bedre)\n",
                        bedsteLedighed.plads.nummer, bedsteLedighed.plads.ledighed);
                 return 0;

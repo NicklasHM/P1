@@ -36,7 +36,7 @@ void læsDataFraFil(const char *filnavn, PriorityQueue *afstandHeap, PriorityQue
                &p.nummer, &p.handicap, &p.el, &p.distance, &p.tid, &p.ledighed);
 
         // Konverter ledighedsstatus (0 = ledig, 1 = optaget)
-        p.ledighed = p.ledighed == 0 ? 1 : 0;
+
 
         // Tilføj pladsen til arrayet
         pladser[index++] = p;
