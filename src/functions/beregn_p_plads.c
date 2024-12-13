@@ -25,9 +25,9 @@ void læsDataFraFil(const char *filnavn, PriorityQueue *afstandHeap, PriorityQue
         exit(1); // Afslut programmet, hvis filen ikke kan åbnes
     }
 
-    char linje[256];
+    // Læs hele filen ind i hukommelsen
     int index = 0;
-
+    char linje[256];
     while (fgets(linje, sizeof(linje), fil)) {
         Parkeringsplads p;
 
@@ -40,14 +40,17 @@ void læsDataFraFil(const char *filnavn, PriorityQueue *afstandHeap, PriorityQue
 
         // Tilføj pladsen til arrayet
         pladser[index++] = p;
-
-        // Indsæt pladsen i prioritetskøerne
-        indsætAlleHeaps(afstandHeap, tidHeap, ledighedHeap, p, pladser, index, præferenceHandicap, præferenceEl);
     }
 
-    *antalPladser = index; // Opdater det samlede antal pladser
-    fclose(fil); // Luk filen
+    fclose(fil); // Luk filen efter indlæsning
+    *antalPladser = index; // Opdater antallet af indlæste pladser
+
+    // Beregn scorer og indsæt alle pladser i prioritetskøerne
+    for (int i = 0; i < index; i++) {
+        indsætAlleHeaps(afstandHeap, tidHeap, ledighedHeap, pladser[i], pladser, index, præferenceHandicap, præferenceEl);
+    }
 }
+
 
 /**
  * Indsætter en parkeringsplads i alle prioritetskøer.
