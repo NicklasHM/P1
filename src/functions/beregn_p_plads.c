@@ -35,9 +35,6 @@ void læsDataFraFil(const char *filnavn, PriorityQueue *afstandHeap, PriorityQue
         sscanf(linje, "Parkeringsplads: %d Handicap: %d El: %d Distance: %lf Tid: %d Ledighed: %d",
                &p.nummer, &p.handicap, &p.el, &p.distance, &p.tid, &p.ledighed);
 
-        // Konverter ledighedsstatus (0 = ledig, 1 = optaget)
-
-
         // Tilføj pladsen til arrayet
         pladser[index++] = p;
     }
