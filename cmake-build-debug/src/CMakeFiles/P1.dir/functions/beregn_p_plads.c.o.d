@@ -1,5 +1,5 @@
 src/CMakeFiles/P1.dir/functions/beregn_p_plads.c.o: \
-  /Users/nhm/CLionProjects/NyP1/src/functions/beregn_p_plads.c \
+  /Users/nhm/CLionProjects/P1/src/functions/beregn_p_plads.c \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/_stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/cdefs.h \
@@ -78,5 +78,5 @@ src/CMakeFiles/P1.dir/functions/beregn_p_plads.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/malloc/_ptrcheck.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_dev_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_mode_t.h \
-  /Users/nhm/CLionProjects/NyP1/src/functions/beregn_p_plads.h \
-  /Users/nhm/CLionProjects/NyP1/src/functions/data.h
+  /Users/nhm/CLionProjects/P1/src/functions/beregn_p_plads.h \
+  /Users/nhm/CLionProjects/P1/src/functions/data.h

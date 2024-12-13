@@ -1,5 +1,6 @@
 src/CMakeFiles/P1.dir/functions/scan_nmrplade.c.o: \
-  /Users/nhm/CLionProjects/NyP1/src/functions/scan_nmrplade.c \
+  /Users/nhm/CLionProjects/P1/src/functions/scan_nmrplade.c \
+  /Users/nhm/CLionProjects/P1/src/functions/scan_nmrplade.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/_stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/cdefs.h \
@@ -41,5 +42,4 @@ src/CMakeFiles/P1.dir/functions/scan_nmrplade.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_errno_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/strings.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/secure/_strings.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/secure/_string.h \
-  /Users/nhm/CLionProjects/NyP1/src/functions/scan_nmrplade.h
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/secure/_string.h

@@ -53,10 +53,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/nhm/CLionProjects/NyP1
+CMAKE_SOURCE_DIR = /Users/nhm/CLionProjects/P1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/nhm/CLionProjects/NyP1/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/nhm/CLionProjects/P1/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/P1.dir/depend.make
@@ -70,60 +70,60 @@ include src/CMakeFiles/P1.dir/progress.make
 include src/CMakeFiles/P1.dir/flags.make
 
 src/CMakeFiles/P1.dir/main.c.o: src/CMakeFiles/P1.dir/flags.make
-src/CMakeFiles/P1.dir/main.c.o: /Users/nhm/CLionProjects/NyP1/src/main.c
+src/CMakeFiles/P1.dir/main.c.o: /Users/nhm/CLionProjects/P1/src/main.c
 src/CMakeFiles/P1.dir/main.c.o: src/CMakeFiles/P1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nhm/CLionProjects/NyP1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/CMakeFiles/P1.dir/main.c.o"
-	cd /Users/nhm/CLionProjects/NyP1/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/P1.dir/main.c.o -MF CMakeFiles/P1.dir/main.c.o.d -o CMakeFiles/P1.dir/main.c.o -c /Users/nhm/CLionProjects/NyP1/src/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nhm/CLionProjects/P1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/CMakeFiles/P1.dir/main.c.o"
+	cd /Users/nhm/CLionProjects/P1/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/P1.dir/main.c.o -MF CMakeFiles/P1.dir/main.c.o.d -o CMakeFiles/P1.dir/main.c.o -c /Users/nhm/CLionProjects/P1/src/main.c
 
 src/CMakeFiles/P1.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/P1.dir/main.c.i"
-	cd /Users/nhm/CLionProjects/NyP1/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nhm/CLionProjects/NyP1/src/main.c > CMakeFiles/P1.dir/main.c.i
+	cd /Users/nhm/CLionProjects/P1/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nhm/CLionProjects/P1/src/main.c > CMakeFiles/P1.dir/main.c.i
 
 src/CMakeFiles/P1.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/P1.dir/main.c.s"
-	cd /Users/nhm/CLionProjects/NyP1/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nhm/CLionProjects/NyP1/src/main.c -o CMakeFiles/P1.dir/main.c.s
+	cd /Users/nhm/CLionProjects/P1/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nhm/CLionProjects/P1/src/main.c -o CMakeFiles/P1.dir/main.c.s
 
 src/CMakeFiles/P1.dir/functions/scan_nmrplade.c.o: src/CMakeFiles/P1.dir/flags.make
-src/CMakeFiles/P1.dir/functions/scan_nmrplade.c.o: /Users/nhm/CLionProjects/NyP1/src/functions/scan_nmrplade.c
+src/CMakeFiles/P1.dir/functions/scan_nmrplade.c.o: /Users/nhm/CLionProjects/P1/src/functions/scan_nmrplade.c
 src/CMakeFiles/P1.dir/functions/scan_nmrplade.c.o: src/CMakeFiles/P1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nhm/CLionProjects/NyP1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/CMakeFiles/P1.dir/functions/scan_nmrplade.c.o"
-	cd /Users/nhm/CLionProjects/NyP1/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/P1.dir/functions/scan_nmrplade.c.o -MF CMakeFiles/P1.dir/functions/scan_nmrplade.c.o.d -o CMakeFiles/P1.dir/functions/scan_nmrplade.c.o -c /Users/nhm/CLionProjects/NyP1/src/functions/scan_nmrplade.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nhm/CLionProjects/P1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/CMakeFiles/P1.dir/functions/scan_nmrplade.c.o"
+	cd /Users/nhm/CLionProjects/P1/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/P1.dir/functions/scan_nmrplade.c.o -MF CMakeFiles/P1.dir/functions/scan_nmrplade.c.o.d -o CMakeFiles/P1.dir/functions/scan_nmrplade.c.o -c /Users/nhm/CLionProjects/P1/src/functions/scan_nmrplade.c
 
 src/CMakeFiles/P1.dir/functions/scan_nmrplade.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/P1.dir/functions/scan_nmrplade.c.i"
-	cd /Users/nhm/CLionProjects/NyP1/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nhm/CLionProjects/NyP1/src/functions/scan_nmrplade.c > CMakeFiles/P1.dir/functions/scan_nmrplade.c.i
+	cd /Users/nhm/CLionProjects/P1/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nhm/CLionProjects/P1/src/functions/scan_nmrplade.c > CMakeFiles/P1.dir/functions/scan_nmrplade.c.i
 
 src/CMakeFiles/P1.dir/functions/scan_nmrplade.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/P1.dir/functions/scan_nmrplade.c.s"
-	cd /Users/nhm/CLionProjects/NyP1/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nhm/CLionProjects/NyP1/src/functions/scan_nmrplade.c -o CMakeFiles/P1.dir/functions/scan_nmrplade.c.s
+	cd /Users/nhm/CLionProjects/P1/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nhm/CLionProjects/P1/src/functions/scan_nmrplade.c -o CMakeFiles/P1.dir/functions/scan_nmrplade.c.s
 
 src/CMakeFiles/P1.dir/functions/beregn_p_plads.c.o: src/CMakeFiles/P1.dir/flags.make
-src/CMakeFiles/P1.dir/functions/beregn_p_plads.c.o: /Users/nhm/CLionProjects/NyP1/src/functions/beregn_p_plads.c
+src/CMakeFiles/P1.dir/functions/beregn_p_plads.c.o: /Users/nhm/CLionProjects/P1/src/functions/beregn_p_plads.c
 src/CMakeFiles/P1.dir/functions/beregn_p_plads.c.o: src/CMakeFiles/P1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nhm/CLionProjects/NyP1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/CMakeFiles/P1.dir/functions/beregn_p_plads.c.o"
-	cd /Users/nhm/CLionProjects/NyP1/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/P1.dir/functions/beregn_p_plads.c.o -MF CMakeFiles/P1.dir/functions/beregn_p_plads.c.o.d -o CMakeFiles/P1.dir/functions/beregn_p_plads.c.o -c /Users/nhm/CLionProjects/NyP1/src/functions/beregn_p_plads.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nhm/CLionProjects/P1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/CMakeFiles/P1.dir/functions/beregn_p_plads.c.o"
+	cd /Users/nhm/CLionProjects/P1/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/P1.dir/functions/beregn_p_plads.c.o -MF CMakeFiles/P1.dir/functions/beregn_p_plads.c.o.d -o CMakeFiles/P1.dir/functions/beregn_p_plads.c.o -c /Users/nhm/CLionProjects/P1/src/functions/beregn_p_plads.c
 
 src/CMakeFiles/P1.dir/functions/beregn_p_plads.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/P1.dir/functions/beregn_p_plads.c.i"
-	cd /Users/nhm/CLionProjects/NyP1/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nhm/CLionProjects/NyP1/src/functions/beregn_p_plads.c > CMakeFiles/P1.dir/functions/beregn_p_plads.c.i
+	cd /Users/nhm/CLionProjects/P1/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nhm/CLionProjects/P1/src/functions/beregn_p_plads.c > CMakeFiles/P1.dir/functions/beregn_p_plads.c.i
 
 src/CMakeFiles/P1.dir/functions/beregn_p_plads.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/P1.dir/functions/beregn_p_plads.c.s"
-	cd /Users/nhm/CLionProjects/NyP1/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nhm/CLionProjects/NyP1/src/functions/beregn_p_plads.c -o CMakeFiles/P1.dir/functions/beregn_p_plads.c.s
+	cd /Users/nhm/CLionProjects/P1/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nhm/CLionProjects/P1/src/functions/beregn_p_plads.c -o CMakeFiles/P1.dir/functions/beregn_p_plads.c.s
 
 src/CMakeFiles/P1.dir/functions/simulering.c.o: src/CMakeFiles/P1.dir/flags.make
-src/CMakeFiles/P1.dir/functions/simulering.c.o: /Users/nhm/CLionProjects/NyP1/src/functions/simulering.c
+src/CMakeFiles/P1.dir/functions/simulering.c.o: /Users/nhm/CLionProjects/P1/src/functions/simulering.c
 src/CMakeFiles/P1.dir/functions/simulering.c.o: src/CMakeFiles/P1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nhm/CLionProjects/NyP1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object src/CMakeFiles/P1.dir/functions/simulering.c.o"
-	cd /Users/nhm/CLionProjects/NyP1/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/P1.dir/functions/simulering.c.o -MF CMakeFiles/P1.dir/functions/simulering.c.o.d -o CMakeFiles/P1.dir/functions/simulering.c.o -c /Users/nhm/CLionProjects/NyP1/src/functions/simulering.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nhm/CLionProjects/P1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object src/CMakeFiles/P1.dir/functions/simulering.c.o"
+	cd /Users/nhm/CLionProjects/P1/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/P1.dir/functions/simulering.c.o -MF CMakeFiles/P1.dir/functions/simulering.c.o.d -o CMakeFiles/P1.dir/functions/simulering.c.o -c /Users/nhm/CLionProjects/P1/src/functions/simulering.c
 
 src/CMakeFiles/P1.dir/functions/simulering.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/P1.dir/functions/simulering.c.i"
-	cd /Users/nhm/CLionProjects/NyP1/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nhm/CLionProjects/NyP1/src/functions/simulering.c > CMakeFiles/P1.dir/functions/simulering.c.i
+	cd /Users/nhm/CLionProjects/P1/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nhm/CLionProjects/P1/src/functions/simulering.c > CMakeFiles/P1.dir/functions/simulering.c.i
 
 src/CMakeFiles/P1.dir/functions/simulering.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/P1.dir/functions/simulering.c.s"
-	cd /Users/nhm/CLionProjects/NyP1/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nhm/CLionProjects/NyP1/src/functions/simulering.c -o CMakeFiles/P1.dir/functions/simulering.c.s
+	cd /Users/nhm/CLionProjects/P1/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nhm/CLionProjects/P1/src/functions/simulering.c -o CMakeFiles/P1.dir/functions/simulering.c.s
 
 # Object files for target P1
 P1_OBJECTS = \
@@ -141,18 +141,18 @@ src/P1: src/CMakeFiles/P1.dir/functions/beregn_p_plads.c.o
 src/P1: src/CMakeFiles/P1.dir/functions/simulering.c.o
 src/P1: src/CMakeFiles/P1.dir/build.make
 src/P1: src/CMakeFiles/P1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/nhm/CLionProjects/NyP1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable P1"
-	cd /Users/nhm/CLionProjects/NyP1/cmake-build-debug/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/P1.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/nhm/CLionProjects/P1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable P1"
+	cd /Users/nhm/CLionProjects/P1/cmake-build-debug/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/P1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/P1.dir/build: src/P1
 .PHONY : src/CMakeFiles/P1.dir/build
 
 src/CMakeFiles/P1.dir/clean:
-	cd /Users/nhm/CLionProjects/NyP1/cmake-build-debug/src && $(CMAKE_COMMAND) -P CMakeFiles/P1.dir/cmake_clean.cmake
+	cd /Users/nhm/CLionProjects/P1/cmake-build-debug/src && $(CMAKE_COMMAND) -P CMakeFiles/P1.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/P1.dir/clean
 
 src/CMakeFiles/P1.dir/depend:
-	cd /Users/nhm/CLionProjects/NyP1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/nhm/CLionProjects/NyP1 /Users/nhm/CLionProjects/NyP1/src /Users/nhm/CLionProjects/NyP1/cmake-build-debug /Users/nhm/CLionProjects/NyP1/cmake-build-debug/src /Users/nhm/CLionProjects/NyP1/cmake-build-debug/src/CMakeFiles/P1.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/nhm/CLionProjects/P1 /Users/nhm/CLionProjects/P1/src /Users/nhm/CLionProjects/P1/cmake-build-debug /Users/nhm/CLionProjects/P1/cmake-build-debug/src /Users/nhm/CLionProjects/P1/cmake-build-debug/src/CMakeFiles/P1.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : src/CMakeFiles/P1.dir/depend
 

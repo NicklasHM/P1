@@ -1,5 +1,5 @@
 src/CMakeFiles/P1.dir/functions/simulering.c.o: \
-  /Users/nhm/CLionProjects/NyP1/src/functions/simulering.c \
+  /Users/nhm/CLionProjects/P1/src/functions/simulering.c \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/_stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/cdefs.h \
@@ -99,6 +99,6 @@ src/CMakeFiles/P1.dir/functions/simulering.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_select.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_uuid_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/gethostuuid.h \
-  /Users/nhm/CLionProjects/NyP1/src/functions/data.h \
-  /Users/nhm/CLionProjects/NyP1/src/functions/beregn_p_plads.h \
-  /Users/nhm/CLionProjects/NyP1/src/functions/simulering.h
+  /Users/nhm/CLionProjects/P1/src/functions/data.h \
+  /Users/nhm/CLionProjects/P1/src/functions/beregn_p_plads.h \
+  /Users/nhm/CLionProjects/P1/src/functions/simulering.h

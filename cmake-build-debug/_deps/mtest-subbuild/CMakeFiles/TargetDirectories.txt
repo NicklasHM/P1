@@ -1,3 +1,0 @@
-C:/Users/patri/CLionProjects/P1/cmake-build-debug/_deps/mtest-subbuild/CMakeFiles/mtest-populate.dir
-C:/Users/patri/CLionProjects/P1/cmake-build-debug/_deps/mtest-subbuild/CMakeFiles/edit_cache.dir
-C:/Users/patri/CLionProjects/P1/cmake-build-debug/_deps/mtest-subbuild/CMakeFiles/rebuild_cache.dir

@@ -1,4 +1,4 @@
-src/CMakeFiles/P1.dir/main.c.o: /Users/nhm/CLionProjects/NyP1/src/main.c \
+src/CMakeFiles/P1.dir/main.c.o: /Users/nhm/CLionProjects/P1/src/main.c \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/_stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/cdefs.h \
@@ -35,6 +35,13 @@ src/CMakeFiles/P1.dir/main.c.o: /Users/nhm/CLionProjects/NyP1/src/main.c \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_ssize_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/secure/_stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/secure/_common.h \
-  /Users/nhm/CLionProjects/NyP1/src/functions/data.h \
-  /Users/nhm/CLionProjects/NyP1/src/functions/beregn_p_plads.h \
-  /Users/nhm/CLionProjects/NyP1/src/functions/simulering.h
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/string.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_rsize_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/_types/_errno_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/strings.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/secure/_strings.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/secure/_string.h \
+  /Users/nhm/CLionProjects/P1/src/functions/data.h \
+  /Users/nhm/CLionProjects/P1/src/functions/beregn_p_plads.h \
+  /Users/nhm/CLionProjects/P1/src/functions/scan_nmrplade.h \
+  /Users/nhm/CLionProjects/P1/src/functions/simulering.h

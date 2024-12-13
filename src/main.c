@@ -43,7 +43,7 @@ int main() {
             return 1;
         }
     while (getchar() != '\n');
-    printf("intast nummerplade\\");
+    printf("indtast nummerplade: ");
     fgets(input, sizeof(input), stdin);
     input[strcspn(input, "\n")] = 0;
     if (line_exists(file, input)) {
