@@ -9,7 +9,7 @@
  * Opdaterer alle parkeringspladser med tilfældig ledighed.
  * Hver plads får værdien 0 (ledig) eller 1 (optaget).
  */
-// Helper function to rebuild heaps
+// Genopbygger heaps
 void rebuildHeaps(PriorityQueue *afstandHeap, PriorityQueue *tidHeap, PriorityQueue *ledighedHeap,
                   Parkeringsplads pladser[], int antalPladser) {
     afstandHeap->size = 0;
@@ -21,7 +21,7 @@ void rebuildHeaps(PriorityQueue *afstandHeap, PriorityQueue *tidHeap, PriorityQu
     }
 }
 
-// Randomly update parking availability
+// Opdaterer alle parkeringspladser tilfældigt til optaget eller ledigt.
 void opdaterLedighedTilfældig(Parkeringsplads pladser[], int antalPladser,
                               PriorityQueue *afstandHeap, PriorityQueue *tidHeap, PriorityQueue *ledighedHeap) {
     for (int i = 0; i < antalPladser; i++) {
@@ -77,7 +77,7 @@ void bilAnkommer(Parkeringsplads pladser[], PriorityQueue *afstandHeap, Priority
 
     if (fundet) {
         printf("Tildelt plads %d.\n", valgtPlads.plads.nummer);
-        rebuildHeaps(afstandHeap, tidHeap, ledighedHeap, pladser, 500); // Synchronize heaps
+        rebuildHeaps(afstandHeap, tidHeap, ledighedHeap, pladser, 500); // Synkroniser heaps
     } else {
         printf("Ingen ledige pladser fundet.\n");
     }

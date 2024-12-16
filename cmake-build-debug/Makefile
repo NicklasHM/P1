@@ -127,6 +127,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_program
+
+# Build rule for target.
+test_program: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_program
+.PHONY : test_program
+
+# fast build rule for target.
+test_program/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_program.dir/build.make src/CMakeFiles/test_program.dir/build
+.PHONY : test_program/fast
+
+#=============================================================================
 # Target rules for targets named P1
 
 # Build rule for target.
@@ -139,19 +152,6 @@ P1/fast:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/P1.dir/build.make src/CMakeFiles/P1.dir/build
 .PHONY : P1/fast
 
-#=============================================================================
-# Target rules for targets named my_test
-
-# Build rule for target.
-my_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_test
-.PHONY : my_test
-
-# fast build rule for target.
-my_test/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/my_test.dir/build.make src/CMakeFiles/my_test.dir/build
-.PHONY : my_test/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,7 +162,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... P1"
-	@echo "... my_test"
+	@echo "... test_program"
 .PHONY : help
 
 

@@ -75,21 +75,64 @@ clean: src/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory _deps/mtest-build
+
+# Recursive "all" directory target.
+_deps/mtest-build/all:
+.PHONY : _deps/mtest-build/all
+
+# Recursive "preinstall" directory target.
+_deps/mtest-build/preinstall:
+.PHONY : _deps/mtest-build/preinstall
+
+# Recursive "clean" directory target.
+_deps/mtest-build/clean:
+.PHONY : _deps/mtest-build/clean
+
+#=============================================================================
 # Directory level rules for directory src
 
 # Recursive "all" directory target.
+src/all: src/CMakeFiles/test_program.dir/all
 src/all: src/CMakeFiles/P1.dir/all
-src/all: src/CMakeFiles/my_test.dir/all
+src/all: _deps/mtest-build/all
 .PHONY : src/all
 
 # Recursive "preinstall" directory target.
-src/preinstall:
+src/preinstall: _deps/mtest-build/preinstall
 .PHONY : src/preinstall
 
 # Recursive "clean" directory target.
+src/clean: src/CMakeFiles/test_program.dir/clean
 src/clean: src/CMakeFiles/P1.dir/clean
-src/clean: src/CMakeFiles/my_test.dir/clean
+src/clean: _deps/mtest-build/clean
 .PHONY : src/clean
+
+#=============================================================================
+# Target rules for target src/CMakeFiles/test_program.dir
+
+# All Build rule for target.
+src/CMakeFiles/test_program.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_program.dir/build.make src/CMakeFiles/test_program.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_program.dir/build.make src/CMakeFiles/test_program.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/nhm/CLionProjects/P1/cmake-build-debug/CMakeFiles --progress-num=6,7,8,9 "Built target test_program"
+.PHONY : src/CMakeFiles/test_program.dir/all
+
+# Build rule for subdir invocation for target.
+src/CMakeFiles/test_program.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/nhm/CLionProjects/P1/cmake-build-debug/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/test_program.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/nhm/CLionProjects/P1/cmake-build-debug/CMakeFiles 0
+.PHONY : src/CMakeFiles/test_program.dir/rule
+
+# Convenience name for target.
+test_program: src/CMakeFiles/test_program.dir/rule
+.PHONY : test_program
+
+# clean rule for target.
+src/CMakeFiles/test_program.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_program.dir/build.make src/CMakeFiles/test_program.dir/clean
+.PHONY : src/CMakeFiles/test_program.dir/clean
 
 #=============================================================================
 # Target rules for target src/CMakeFiles/P1.dir
@@ -116,32 +159,6 @@ P1: src/CMakeFiles/P1.dir/rule
 src/CMakeFiles/P1.dir/clean:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/P1.dir/build.make src/CMakeFiles/P1.dir/clean
 .PHONY : src/CMakeFiles/P1.dir/clean
-
-#=============================================================================
-# Target rules for target src/CMakeFiles/my_test.dir
-
-# All Build rule for target.
-src/CMakeFiles/my_test.dir/all:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/my_test.dir/build.make src/CMakeFiles/my_test.dir/depend
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/my_test.dir/build.make src/CMakeFiles/my_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/nhm/CLionProjects/P1/cmake-build-debug/CMakeFiles --progress-num=6,7,8,9 "Built target my_test"
-.PHONY : src/CMakeFiles/my_test.dir/all
-
-# Build rule for subdir invocation for target.
-src/CMakeFiles/my_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/nhm/CLionProjects/P1/cmake-build-debug/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/my_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/nhm/CLionProjects/P1/cmake-build-debug/CMakeFiles 0
-.PHONY : src/CMakeFiles/my_test.dir/rule
-
-# Convenience name for target.
-my_test: src/CMakeFiles/my_test.dir/rule
-.PHONY : my_test
-
-# clean rule for target.
-src/CMakeFiles/my_test.dir/clean:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/my_test.dir/build.make src/CMakeFiles/my_test.dir/clean
-.PHONY : src/CMakeFiles/my_test.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

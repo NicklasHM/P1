@@ -12,7 +12,6 @@ typedef struct {
     int size;
 } PriorityQueue;
 
-// Funktioner
 void læsDataFraFil(const char *filnavn, PriorityQueue *afstandHeap, PriorityQueue *tidHeap, PriorityQueue *ledighedHeap,
                    Parkeringsplads pladser[], int *antalPladser, int præferenceHandicap, int præferenceEl);
 

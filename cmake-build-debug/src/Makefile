@@ -127,6 +127,20 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+src/CMakeFiles/test_program.dir/rule:
+	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/test_program.dir/rule
+.PHONY : src/CMakeFiles/test_program.dir/rule
+
+# Convenience name for target.
+test_program: src/CMakeFiles/test_program.dir/rule
+.PHONY : test_program
+
+# fast build rule for target.
+test_program/fast:
+	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_program.dir/build.make src/CMakeFiles/test_program.dir/build
+.PHONY : test_program/fast
+
+# Convenience name for target.
 src/CMakeFiles/P1.dir/rule:
 	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/P1.dir/rule
 .PHONY : src/CMakeFiles/P1.dir/rule
@@ -140,27 +154,13 @@ P1/fast:
 	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/P1.dir/build.make src/CMakeFiles/P1.dir/build
 .PHONY : P1/fast
 
-# Convenience name for target.
-src/CMakeFiles/my_test.dir/rule:
-	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/my_test.dir/rule
-.PHONY : src/CMakeFiles/my_test.dir/rule
-
-# Convenience name for target.
-my_test: src/CMakeFiles/my_test.dir/rule
-.PHONY : my_test
-
-# fast build rule for target.
-my_test/fast:
-	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/my_test.dir/build.make src/CMakeFiles/my_test.dir/build
-.PHONY : my_test/fast
-
 functions/beregn_p_plads.o: functions/beregn_p_plads.c.o
 .PHONY : functions/beregn_p_plads.o
 
 # target to build an object file
 functions/beregn_p_plads.c.o:
+	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_program.dir/build.make src/CMakeFiles/test_program.dir/functions/beregn_p_plads.c.o
 	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/P1.dir/build.make src/CMakeFiles/P1.dir/functions/beregn_p_plads.c.o
-	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/my_test.dir/build.make src/CMakeFiles/my_test.dir/functions/beregn_p_plads.c.o
 .PHONY : functions/beregn_p_plads.c.o
 
 functions/beregn_p_plads.i: functions/beregn_p_plads.c.i
@@ -168,8 +168,8 @@ functions/beregn_p_plads.i: functions/beregn_p_plads.c.i
 
 # target to preprocess a source file
 functions/beregn_p_plads.c.i:
+	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_program.dir/build.make src/CMakeFiles/test_program.dir/functions/beregn_p_plads.c.i
 	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/P1.dir/build.make src/CMakeFiles/P1.dir/functions/beregn_p_plads.c.i
-	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/my_test.dir/build.make src/CMakeFiles/my_test.dir/functions/beregn_p_plads.c.i
 .PHONY : functions/beregn_p_plads.c.i
 
 functions/beregn_p_plads.s: functions/beregn_p_plads.c.s
@@ -177,8 +177,8 @@ functions/beregn_p_plads.s: functions/beregn_p_plads.c.s
 
 # target to generate assembly for a file
 functions/beregn_p_plads.c.s:
+	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_program.dir/build.make src/CMakeFiles/test_program.dir/functions/beregn_p_plads.c.s
 	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/P1.dir/build.make src/CMakeFiles/P1.dir/functions/beregn_p_plads.c.s
-	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/my_test.dir/build.make src/CMakeFiles/my_test.dir/functions/beregn_p_plads.c.s
 .PHONY : functions/beregn_p_plads.c.s
 
 functions/scan_nmrplade.o: functions/scan_nmrplade.c.o
@@ -186,8 +186,8 @@ functions/scan_nmrplade.o: functions/scan_nmrplade.c.o
 
 # target to build an object file
 functions/scan_nmrplade.c.o:
+	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_program.dir/build.make src/CMakeFiles/test_program.dir/functions/scan_nmrplade.c.o
 	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/P1.dir/build.make src/CMakeFiles/P1.dir/functions/scan_nmrplade.c.o
-	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/my_test.dir/build.make src/CMakeFiles/my_test.dir/functions/scan_nmrplade.c.o
 .PHONY : functions/scan_nmrplade.c.o
 
 functions/scan_nmrplade.i: functions/scan_nmrplade.c.i
@@ -195,8 +195,8 @@ functions/scan_nmrplade.i: functions/scan_nmrplade.c.i
 
 # target to preprocess a source file
 functions/scan_nmrplade.c.i:
+	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_program.dir/build.make src/CMakeFiles/test_program.dir/functions/scan_nmrplade.c.i
 	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/P1.dir/build.make src/CMakeFiles/P1.dir/functions/scan_nmrplade.c.i
-	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/my_test.dir/build.make src/CMakeFiles/my_test.dir/functions/scan_nmrplade.c.i
 .PHONY : functions/scan_nmrplade.c.i
 
 functions/scan_nmrplade.s: functions/scan_nmrplade.c.s
@@ -204,8 +204,8 @@ functions/scan_nmrplade.s: functions/scan_nmrplade.c.s
 
 # target to generate assembly for a file
 functions/scan_nmrplade.c.s:
+	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_program.dir/build.make src/CMakeFiles/test_program.dir/functions/scan_nmrplade.c.s
 	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/P1.dir/build.make src/CMakeFiles/P1.dir/functions/scan_nmrplade.c.s
-	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/my_test.dir/build.make src/CMakeFiles/my_test.dir/functions/scan_nmrplade.c.s
 .PHONY : functions/scan_nmrplade.c.s
 
 functions/simulering.o: functions/simulering.c.o
@@ -261,7 +261,7 @@ test/test_functions.o: test/test_functions.c.o
 
 # target to build an object file
 test/test_functions.c.o:
-	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/my_test.dir/build.make src/CMakeFiles/my_test.dir/test/test_functions.c.o
+	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_program.dir/build.make src/CMakeFiles/test_program.dir/test/test_functions.c.o
 .PHONY : test/test_functions.c.o
 
 test/test_functions.i: test/test_functions.c.i
@@ -269,7 +269,7 @@ test/test_functions.i: test/test_functions.c.i
 
 # target to preprocess a source file
 test/test_functions.c.i:
-	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/my_test.dir/build.make src/CMakeFiles/my_test.dir/test/test_functions.c.i
+	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_program.dir/build.make src/CMakeFiles/test_program.dir/test/test_functions.c.i
 .PHONY : test/test_functions.c.i
 
 test/test_functions.s: test/test_functions.c.s
@@ -277,7 +277,7 @@ test/test_functions.s: test/test_functions.c.s
 
 # target to generate assembly for a file
 test/test_functions.c.s:
-	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/my_test.dir/build.make src/CMakeFiles/my_test.dir/test/test_functions.c.s
+	cd /Users/nhm/CLionProjects/P1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_program.dir/build.make src/CMakeFiles/test_program.dir/test/test_functions.c.s
 .PHONY : test/test_functions.c.s
 
 # Help Target
@@ -290,7 +290,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... P1"
-	@echo "... my_test"
+	@echo "... test_program"
 	@echo "... functions/beregn_p_plads.o"
 	@echo "... functions/beregn_p_plads.i"
 	@echo "... functions/beregn_p_plads.s"

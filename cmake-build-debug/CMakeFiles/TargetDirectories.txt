@@ -1,8 +1,11 @@
 /Users/nhm/CLionProjects/P1/cmake-build-debug/CMakeFiles/test.dir
 /Users/nhm/CLionProjects/P1/cmake-build-debug/CMakeFiles/edit_cache.dir
 /Users/nhm/CLionProjects/P1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/nhm/CLionProjects/P1/cmake-build-debug/src/CMakeFiles/test_program.dir
 /Users/nhm/CLionProjects/P1/cmake-build-debug/src/CMakeFiles/P1.dir
-/Users/nhm/CLionProjects/P1/cmake-build-debug/src/CMakeFiles/my_test.dir
 /Users/nhm/CLionProjects/P1/cmake-build-debug/src/CMakeFiles/test.dir
 /Users/nhm/CLionProjects/P1/cmake-build-debug/src/CMakeFiles/edit_cache.dir
 /Users/nhm/CLionProjects/P1/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir
+/Users/nhm/CLionProjects/P1/cmake-build-debug/_deps/mtest-build/CMakeFiles/test.dir
+/Users/nhm/CLionProjects/P1/cmake-build-debug/_deps/mtest-build/CMakeFiles/edit_cache.dir
+/Users/nhm/CLionProjects/P1/cmake-build-debug/_deps/mtest-build/CMakeFiles/rebuild_cache.dir

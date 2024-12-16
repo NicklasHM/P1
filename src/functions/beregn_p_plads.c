@@ -109,14 +109,6 @@ int beregnTidScore(Parkeringsplads p) {
  * @return Ledighedsscore.
  */
 int beregnLedighedScore(Parkeringsplads p, Parkeringsplads pladser[], int antalPladser, int præferenceHandicap, int præferenceEl) {
-    // Prioritering baseret på brugerpræferencer
-    if (præferenceHandicap && !p.handicap) {
-        return -1000; // Lav prioritet for ikke-handicap pladser
-    }
-    if (præferenceEl && !p.el) {
-        return -1000; // Lav prioritet for ikke-el-pladser
-    }
-
     // Kontroller omkringliggende pladser for ledighed
     int ledigeNaboer = 0;
     for (int i = 0; i < antalPladser; i++) {
@@ -126,7 +118,6 @@ int beregnLedighedScore(Parkeringsplads p, Parkeringsplads pladser[], int antalP
             }
         }
     }
-
     // Høj prioritet for pladser med flere ledige naboer // Flere ledige naboer giver højere prioritet
     return ledigeNaboer * 10 - (p.ledighed * 50);
 }

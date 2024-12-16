@@ -130,6 +130,21 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 //Value Computed by CMake
 CMAKE_PROJECT_NAME:STATIC=P1
 
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION:STATIC=0.1.1
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_MAJOR:STATIC=0
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_MINOR:STATIC=1
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_PATCH:STATIC=1
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_TWEAK:STATIC=
+
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/Library/Developer/CommandLineTools/usr/bin/ranlib
 
@@ -195,6 +210,26 @@ CMAKE_TAPI:FILEPATH=/Library/Developer/CommandLineTools/usr/bin/tapi
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Directory under which to collect all populated content
+FETCHCONTENT_BASE_DIR:PATH=/Users/nhm/CLionProjects/P1/cmake-build-debug/_deps
+
+//Disables all attempts to download or update content and assumes
+// source dirs already exist
+FETCHCONTENT_FULLY_DISCONNECTED:BOOL=OFF
+
+//Enables QUIET option for all content population
+FETCHCONTENT_QUIET:BOOL=ON
+
+//When not empty, overrides where to find pre-populated content
+// for mtest
+FETCHCONTENT_SOURCE_DIR_MTEST:PATH=
+
+//Enables UPDATE_DISCONNECTED behavior for all content population
+FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
+
+//Enables UPDATE_DISCONNECTED behavior just for population of mtest
+FETCHCONTENT_UPDATES_DISCONNECTED_MTEST:BOOL=OFF
+
 //Value Computed by CMake
 P1_BINARY_DIR:STATIC=/Users/nhm/CLionProjects/P1/cmake-build-debug
 
@@ -203,6 +238,15 @@ P1_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 P1_SOURCE_DIR:STATIC=/Users/nhm/CLionProjects/P1
+
+//Value Computed by CMake
+mtest_BINARY_DIR:STATIC=/Users/nhm/CLionProjects/P1/cmake-build-debug/_deps/mtest-build
+
+//Value Computed by CMake
+mtest_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+mtest_SOURCE_DIR:STATIC=/Users/nhm/CLionProjects/P1/cmake-build-debug/_deps/mtest-src
 
 
 ########################
@@ -287,7 +331,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
