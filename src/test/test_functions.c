@@ -66,4 +66,42 @@ TEST_CASE(test_ledighed, {
     CHECK_EQ_INT(15, result);
 })
 
-MAIN_RUN_TESTS(test_afstand, test_ledighed, test_tid)
+TEST_CASE(test_handikap, {
+    int result = 0;
+    PriorityQueue afstandHeap = { .size = 0 };
+    PriorityQueue tidHeap = { .size = 0 };
+    PriorityQueue ledighedHeap = { .size = 0 };
+    Parkeringsplads pladser[500];
+    int antalPladser = 0;
+    læsDataFraFil("test_datafil.txt", &afstandHeap, &tidHeap, &ledighedHeap, pladser, &antalPladser, 0, 0);
+    for (int i = 0; i < antalPladser; i++) {
+        if (pladser[i].handicap == 1 && pladser[i].ledighed == 0) {
+            printf("Første ledige handicap-parkering: Plads %d, Afstand: %.2f meter\n",
+                   pladser[i].nummer, pladser[i].distance);
+            result = pladser[i].nummer;
+            break; // Stop programmet her
+        }
+    }
+    CHECK_EQ_INT(141, result);
+})
+
+TEST_CASE(test_el, {
+    int result = 0;
+    PriorityQueue afstandHeap = { .size = 0 };
+    PriorityQueue tidHeap = { .size = 0 };
+    PriorityQueue ledighedHeap = { .size = 0 };
+    Parkeringsplads pladser[500];
+    int antalPladser = 0;
+    læsDataFraFil("test_datafil.txt", &afstandHeap, &tidHeap, &ledighedHeap, pladser, &antalPladser, 0, 0);
+    for (int i = 0; i < antalPladser; i++) {
+        if (pladser[i].el == 1 && pladser[i].ledighed == 0) {
+            printf("Første ledige handicap-parkering: Plads %d, Afstand: %.2f meter\n",
+                   pladser[i].nummer, pladser[i].distance);
+            result = pladser[i].nummer;
+            break; // Stop programmet her
+        }
+    }
+    CHECK_EQ_INT(45, result);
+})
+
+MAIN_RUN_TESTS(test_afstand, test_ledighed, test_tid, test_handikap, test_el)
