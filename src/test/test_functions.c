@@ -79,7 +79,7 @@ TEST_CASE(test_handikap, {
             printf("Første ledige handicap-parkering: Plads %d, Afstand: %.2f meter\n",
                    pladser[i].nummer, pladser[i].distance);
             result = pladser[i].nummer;
-            break; // Stop programmet her
+            break;
         }
     }
     CHECK_EQ_INT(141, result);
@@ -98,7 +98,7 @@ TEST_CASE(test_el, {
             printf("Første ledige handicap-parkering: Plads %d, Afstand: %.2f meter\n",
                    pladser[i].nummer, pladser[i].distance);
             result = pladser[i].nummer;
-            break; // Stop programmet her
+            break;
         }
     }
     CHECK_EQ_INT(45, result);
